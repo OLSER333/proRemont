@@ -35,11 +35,12 @@ $on768: 767.98px;
 $tr-time: 0.3s; // transition time
 
 
-:root {--side-indent: 70px;
-@media (max-width:$mobile) {
-  --side-indent: 20px;
-}
-}
+//:root {--side-indent: 70px;
+//@media (max-width:$mobile) {
+//  --side-indent: 20px;
+//  @include adaptiveValue("--side-indent", , , 1440, 320);;
+//}
+//}
 
 
 // уменьшаю везде паддинг с 20 до 15px
