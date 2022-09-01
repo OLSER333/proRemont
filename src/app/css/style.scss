@@ -1,8 +1,14 @@
-@import 'var';
-@import 'mixin';
-@import 'fonts';
+@import 'variables';
+@import "null";
+@import 'mixins';
+@import '_fonts';
+
 
 .hello {
-  font-family: 'AvenirNextCyr', Arial, sans-serif;
-  color: $textColorDefault;
+  background: red;
+}
+
+.norm {
+  height: 200px;
+  background: yellow;
 }
