@@ -2,13 +2,6 @@
 @import "null";
 @import 'mixins';
 @import '_fonts';
+@import "common";
+@import "footer";
 
-
-.hello {
-  background: red;
-}
-
-.norm {
-  height: 200px;
-  background: yellow;
-}

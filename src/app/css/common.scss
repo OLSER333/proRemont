@@ -1,0 +1,48 @@
+
+[class*="__container"] {
+  max-width: $maxW;
+  padding: 0 var(--side-indent);
+  margin: 0 auto;
+
+}
+
+
+.usual-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+max-width: 180px;
+
+  color: $light3;
+  background: $primary1;
+
+  font-family: $ff2;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+
+  &:hover {
+    background: $primary2;
+  }
+
+  &:active {
+    background: $dark1;
+  }
+}
+
+.usual-header {
+  font-family: $ff2;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.4;
+  color: $dark2;
+
+  &__white {
+    color: $light1
+  }
+}
+
+

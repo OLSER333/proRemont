@@ -1,0 +1,56 @@
+$ff1: 'Avenir', sans-serif;
+$ff2: 'Oswald', sans-serif;
+
+
+$main-font-size: 15px;
+$primary-line-height: 1.2;
+$main-font-weight: 400;
+$main-bg-color: #F9F9F9;
+
+
+//colors:
+$dark1: #212121;
+$dark2: #0F0F0E;
+$dark3: #313131;
+$dark4: #7E7668;
+$dark5: #3C3C3C;
+
+$light1: #FFFFFF;
+$light3: #FFFBF4;
+$light4: #B9AE9D;
+$light5: #E7E7E7;
+
+$primary1: #EAA53C;
+$primary2: #CB8A27;
+
+
+
+
+
+$maxW: 1440px; // 20 паддинги с обеих сторон
+$toBurger: 1100px;
+$mobile: 767.98px; // это когда переходит на бургер, просто так назвал
+$minW: 320.98px;
+$on768: 767.98px;
+$tr-time: 0.3s; // transition time
+
+
+:root {--side-indent: 70px;
+@media (max-width:$mobile) {
+  --side-indent: 20px;
+}
+}
+
+
+// уменьшаю везде паддинг с 20 до 15px
+
+//:root {
+//  --side-indent: 20px;
+
+
+  //@media (max-width: $modal-to-mb) {
+  //  --side-indent: 15px;
+  //
+  //}
+//}
+
