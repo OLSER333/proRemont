@@ -49,6 +49,7 @@
   font-size: 64px;
   line-height: 88px;
   color: $dark2;
+  @include adaptiveValue("left", 223, 180, 1240, 950);
 }
 
 .hero__price {
@@ -57,7 +58,7 @@
     max-width: 570px;
     max-height: 120px;
     width: 100%;
-    //@include adaptiveValue("width", 500, 350px, 1440, );
+    @include adaptiveValue("width", 500, 350, 1440, 950);
     height: 100%;
     left: 0;
     top: 537px;
@@ -102,14 +103,15 @@
     max-width: 458px;
     max-height: 270px;
     width: 100%;
+    @include adaptiveValue("width", 460, 360, 1440, 950);
     height: 100%;
     right: 0;
     top: 274px;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
   }
-  @media (max-width:$mobile) {
-
+  @media (max-width: 1200px) {
+    top: 0;
   }
 }
 
