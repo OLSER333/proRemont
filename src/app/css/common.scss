@@ -26,7 +26,7 @@
 max-width: 180px;
 
   color: $light3;
-  background: $primary1;
+  background-color: $primary1;
 
   font-family: $ff2;
   font-style: normal;
@@ -34,13 +34,13 @@ max-width: 180px;
   font-size: 16px;
   line-height: 24px;
 
-
+transition: background-color $tr-time ease;
   &:hover {
-    background: $primary2;
+    background-color: $primary2;
   }
 
   &:active {
-    background: $dark1;
+    background-color: $dark1;
   }
 }
 

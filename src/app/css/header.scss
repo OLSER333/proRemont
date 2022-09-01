@@ -1,6 +1,7 @@
 .header {
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.04);
   background: #FFFFFF;
+
 }
 
 
@@ -8,12 +9,16 @@
 .header__container {
   display: flex;
   align-items: center;
-  gap: 10px;
 
+  gap: 15px;
+  min-height: 70px;
+  @media (max-width:$toBurger) {
+    min-height: 60px;
+  }
 
   > .usual-btn {
     margin-left: auto;
-    @media (max-width:$mobile) {
+    @media (max-width:$toBurger) {
       display: none;
     }
   }
@@ -27,8 +32,23 @@
 .header__nav {
   display: flex;
   gap: 10px;
+  @include adaptiveValue("gap", 70, 15, 1440, 1000);
 }
 
 .header__nav-link {
+  font-family: $ff1;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+
+  /* Dark/2 */
+
+  color: $dark2;
+  transition: color $tr-time ease;
+
+  &:hover {
+    color: $primary1;
+  }
+
 }
 

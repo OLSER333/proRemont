@@ -1,0 +1,139 @@
+
+.hero {
+  position: relative;
+  height: 780px;
+  @media (max-width:$mobile) {
+    height: 607px;
+  }
+}
+
+.hero__bg {
+  background: $dark1 url('../img/hero-bg.jpg') 35% 0 no-repeat;
+  //object-fit: cover;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero__roller {
+  display: none;
+  @media (max-width:$mobile) {
+    display: block;
+  }
+}
+
+.hero__level {
+  display: none;
+  @media (max-width:$mobile) {
+    display: block;
+  }
+}
+
+.hero__container {
+  max-width: calc($maxW + 120px);
+}
+
+.hero__header {
+  position: absolute;
+  max-width: 443px;
+  max-height: 178px;
+  width: 100%;
+  height: 100%;
+  left: 223px;
+  top: 299px;
+
+  font-family: $ff2;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 88px;
+  color: $dark2;
+}
+
+.hero__price {
+  @media (min-width:$mobile) {
+    position: absolute;
+    max-width: 570px;
+    max-height: 120px;
+    width: 100%;
+    //@include adaptiveValue("width", 500, 350px, 1440, );
+    height: 100%;
+    left: 0;
+    top: 537px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 70px;
+    padding-bottom: 30px;
+
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+
+    font-family: $ff2;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 52px;
+    color: $dark2;
+
+    span {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 74px;
+      text-transform: uppercase;
+      color: $primary1;
+      padding: 0 5px;
+      transform: translateY(5px);
+    }
+
+  }
+}
+
+.hero__warranty {
+  @media (min-width:$mobile) {
+    position: absolute;
+    padding: 55px 0 0 55px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    max-width: 458px;
+    max-height: 270px;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 274px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+  }
+  @media (max-width:$mobile) {
+
+  }
+}
+
+.hero__warranty-item {
+
+
+
+  &:nth-child(1) {
+    font-family: $ff2;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 44px;
+    text-transform: uppercase;
+    color: $dark2;
+  }
+
+  &:nth-child(2) {
+    font-family: $ff1;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 30px;
+    color: $dark2;
+  }
+
+
+
+}
