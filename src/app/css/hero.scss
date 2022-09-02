@@ -2,7 +2,7 @@
 .hero {
   position: relative;
   height: 780px;
-  @media (max-width:$mobile) {
+  @media (max-width: $hero-to-mb) {
     height: 607px;
   }
 }
@@ -19,46 +19,109 @@
 
 .hero__roller {
   display: none;
-  @media (max-width:$mobile) {
+  @media (max-width: $hero-to-mb) {
     display: block;
+    position: absolute;
+    bottom: -67px;
+    right: 0;
+    z-index: 5;
   }
 }
 
 .hero__level {
   display: none;
-  @media (max-width:$mobile) {
+  @media (max-width: $hero-to-mb) {
     display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: $zi-roller-hero;
   }
 }
 
 .hero__container {
-  max-width: calc($maxW + 120px);
+  max-width: calc(1440px + 120px);
+  height: 100%;
+  position: relative;
+  @media (min-width: $hero-to-mb) {
+    padding: 0;
+  }
+  //position: relative;
+
 }
 
 .hero__header {
-  position: absolute;
-  max-width: 443px;
-  max-height: 178px;
-  width: 100%;
-  height: 100%;
-  left: 223px;
-  top: 299px;
 
   font-family: $ff2;
   font-weight: 700;
-  font-size: 64px;
-  line-height: 88px;
   color: $dark2;
-  @include adaptiveValue("left", 223, 180, 1240, 950);
+  position: absolute;
+  @media (min-width: $hero-to-mb) {
+    max-width: 443px;
+    max-height: 178px;
+    width: 100%;
+    height: 100%;
+    left: 223px;
+    top: 299px;
+
+
+    font-size: 64px;
+    line-height: 88px;
+
+    @include adaptiveValue("left", 223, 100, 1240, 600);
+  }
+
+
+  @media (max-width: $hero-to-mb) {
+    font-size: 74px;
+    line-height: 74px;
+    width: 100%;
+    height: 286px;
+    left: 0;
+    top: 190px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    span {
+      //width: 250px;
+      display: block;
+      width: 339px;
+      text-align: center;
+    }
+  }
+
 }
 
 .hero__price {
-  @media (min-width:$mobile) {
-    position: absolute;
+  position: absolute;
+  font-family: $ff2;
+  font-weight: 400;
+  color: $dark2;
+
+  .hero__price-amount {
+    color: $primary1;
+    text-transform: uppercase;
+    font-weight: 700;
+    span {
+      font-size: 35px;
+      @media (max-width:$hero-to-mb) {
+        font-size: 24px;
+      }
+    }
+  }
+
+
+  @media (min-width: $hero-to-mb) {
     max-width: 570px;
     max-height: 120px;
     width: 100%;
-    @include adaptiveValue("width", 500, 350, 1440, 950);
+    @include adaptiveValue("width", 500, 380, 1440, 950);
     height: 100%;
     left: 0;
     top: 537px;
@@ -72,28 +135,57 @@
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px);
 
-    font-family: $ff2;
-    font-weight: 400;
+
     font-size: 35px;
     line-height: 52px;
-    color: $dark2;
 
-    span {
-      font-weight: 700;
+    .hero__price-amount {
       font-size: 50px;
       line-height: 74px;
-      text-transform: uppercase;
-      color: $primary1;
       padding: 0 8px;
-      transform: translateY(5px);
+      transform: translateY(12px);
     }
 
+  }
+  @media (max-width: $hero-to-mb) {
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    width: 126px;
+    height: 126px;
+    left: 45px;
+    top: 26px;
+
+    font-size: 24px;
+
+    .hero__price-amount {
+      font-size: 34px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 100%;
+      height: 100%;
+      background: url('../img/angles.svg') 0 0 / contain no-repeat;
+
+    }
   }
 }
 
 .hero__warranty {
-  @media (min-width:$mobile) {
-    position: absolute;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+
+
+  @media (min-width: $hero-to-mb) {
     padding: 55px 0 0 55px;
 
     display: flex;
@@ -107,16 +199,24 @@
     height: 100%;
     right: 0;
     top: 274px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(20px);
+
   }
   @media (max-width: 1200px) {
     top: 0;
   }
+  @media (max-width: $hero-to-mb) {
+    padding-left: 20px;
+
+    width: 227px;
+    height: 84px;
+    left: 0;
+    top: 522px;
+    z-index: $zi-warranty-hero;
+
+  }
 }
 
 .hero__warranty-item {
-
 
 
   &:nth-child(1) {
@@ -126,6 +226,11 @@
     line-height: 44px;
     text-transform: uppercase;
     color: $dark2;
+
+    @media (max-width:$hero-to-mb) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   &:nth-child(2) {
@@ -134,8 +239,20 @@
     font-size: 22px;
     line-height: 30px;
     color: $dark2;
+    @media (max-width:$hero-to-mb) {
+      display: none;
+    }
   }
 
 
+}
 
+
+.hero__price-mb-word {
+  display: none;
+  @media (max-width:$hero-to-mb) {
+    font-size: 24px;
+    line-height: 36px;
+    display: inline;
+  }
 }
