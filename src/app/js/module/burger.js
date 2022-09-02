@@ -22,10 +22,8 @@ export default function() {
 
   window.addEventListener('resize', (e) => {
     if(document.documentElement.clientWidth > v.toBurger) {
-      console.log('1')
       document.querySelector('.page').prepend(header)
       if(document.querySelector('.header__burg--open')) {
-        console.log('2')
         toggleBurg()
       }
     }

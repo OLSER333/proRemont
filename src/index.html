@@ -33,7 +33,7 @@
       </button>
     </div>
   </header>
-  <main>
+  <main >
     <section class="hero">
       <div class="hero__bg"></div>
 
@@ -59,59 +59,96 @@
         </div>
       </div>
     </section>
-    <div class="about"></div>
+    <section class="about">
+      <div class="about__container">
+        <div class=" about__photo about__item"><img src="./app/img/ivan-photo.jpg" alt="Иван Руденко"></div>
+        <div class="about__name-spec about__item">
+          <p>Иван Руденко</p>
+          <p>Специалист по отделке квартир в Новороссийске</p>
+        </div>
+        <div class=" about__slogan about__item">Я уверен, что ремонт должен приносить комфорт и радость, а не огромное количество последствий и денежных затрат.</div>
+        <div class="about__exp about__item">
+          <p>В мире ремонта более 3 лет</p>
+          <p>Выполнено более 250 проектов</p>
+        </div>
+        <div class="about__warranty about__item">
+          <p class="about__warranty-words" >Я гарантирую вам:</p>
+          <div class="about__cards">
+            <div class="about__card">
+              <img class="about__card--img" src="./app/img/time-management.svg" alt="Тайм-менеджмент">
+              <p class="about__card--label">Точный рассчет сроков и стоимости работ</p>
+            </div>
+            <div class="about__card">
+              <img class="about__card--img" src="./app/img/paint-roller.svg" alt="Качество">
+              <p class="about__card--label">Качественное исполнение
+                и соблюдение технологий</p>
+            </div>
+            <div class="about__card">
+              <img class="about__card--img" src="./app/img/creativity.svg" alt="Креативность">
+              <p class="about__card--label">Внимательность
+                к пожеланием клиента</p>
+            </div>
+            <div class="about__card">
+              <img class="about__card--img" src="./app/img/workers.svg" alt="Опыт">
+              <p class="about__card--label">Квалифицированный и опытный персонал</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!--    <div style="height: 500px;"></div>-->
+    <footer class="footer">
+      <div class="footer__bg">
+
+      </div>
+      <div class="footer__container">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <div class="footer__logo">
+              <a href="/"><img src="./app/img/footer-logo.png" alt="Логотип"></a>
+            </div>
+            <button class="usual-btn">Вызвать замерщика</button>
+          </li>
+          <li class="footer__item">
+            <h3 class="footer__header">Контакты</h3>
+            <ul class="footer__contacts">
+              <li class="footer__contacts-item">
+                <img src="./app/img/tel.svg">
+                <a href="tel:+79189873638">+7 (918) 987-36-38</a></li>
+              <li class="footer__contacts-item">
+                <img src="./app/img/mail.svg">
+                <a href="mailto:proremont.nvrsk@mail.ru">proremont.nvrsk@mail.ru</a></li>
+              <li class="footer__contacts-item">
+                <img src="./app/img/map.svg">
+                <address>Видова&nbsp;65,&nbsp;Новороссийск</address>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__item">
+            <div class="footer__map">
+              <img src="./app/img/footer-map.png" alt="Карта">
+            </div>
+          </li>
+          <li class="footer__item">
+            <h3 class="footer__header">Социальные сети</h3>
+            <ul class="footer__social">
+              <li class="footer__social-item">
+                <a href="#"><img src="./app/img/telegram.svg"></a>
+              </li>
+              <li class="footer__social-item">
+                <a href="#"><img src="./app/img/vk.svg"></a>
+              </li>
+              <li class="footer__social-item">
+                <a href="#"><img src="./app/img/whatsapp.svg"></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </main>
 
 
-  <footer class="footer">
-    <div class="footer__bg">
-
-    </div>
-    <div class="footer__container">
-      <ul class="footer__list">
-        <li class="footer__item">
-          <div class="footer__logo">
-            <a href="/"><img src="./app/img/footer-logo.png" alt="Логотип"></a>
-          </div>
-          <button class="usual-btn">Вызвать замерщика</button>
-        </li>
-        <li class="footer__item">
-          <h3 class="footer__header">Контакты</h3>
-          <ul class="footer__contacts">
-            <li class="footer__contacts-item">
-              <img src="./app/img/tel.svg">
-              <a href="tel:+79189873638">+7 (918) 987-36-38</a></li>
-            <li class="footer__contacts-item">
-              <img src="./app/img/mail.svg">
-              <a href="mailto:proremont.nvrsk@mail.ru">proremont.nvrsk@mail.ru</a></li>
-            <li class="footer__contacts-item">
-              <img src="./app/img/map.svg">
-              <address>Видова&nbsp;65,&nbsp;Новороссийск</address>
-            </li>
-          </ul>
-        </li>
-        <li class="footer__item">
-          <div class="footer__map">
-            <img src="./app/img/footer-map.png" alt="Карта">
-          </div>
-        </li>
-        <li class="footer__item">
-          <h3 class="footer__header">Социальные сети</h3>
-          <ul class="footer__social">
-            <li class="footer__social-item">
-              <a href="#"><img src="./app/img/telegram.svg"></a>
-            </li>
-            <li class="footer__social-item">
-              <a href="#"><img src="./app/img/vk.svg"></a>
-            </li>
-            <li class="footer__social-item">
-              <a href="#"><img src="./app/img/whatsapp.svg"></a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </footer>
 </div>
 </body>
 </html>

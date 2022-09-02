@@ -1,0 +1,54 @@
+.about {
+  @include adaptiveValue("padding-top", 80, 60, 1440, 950);
+  padding-top: 80px;
+}
+
+.about__container {
+  display: grid;
+  grid-template-areas:
+  'a b d'
+  'a c d'
+  'a e e'
+  'a e e'
+;
+}
+
+.about__item {
+}
+
+.about__photo {
+  grid-area: a;
+}
+
+
+
+.about__name-spec {
+  grid-area: b;
+}
+
+.about__slogan {
+  grid-area: c;
+}
+
+.about__exp {
+  grid-area: d;
+}
+
+.about__warranty {
+  grid-area: e;
+}
+
+.about__warranty-words {
+}
+
+.about__cards {
+}
+
+.about__card {
+}
+
+.about__card--img {
+}
+
+.about__card--label {
+}
