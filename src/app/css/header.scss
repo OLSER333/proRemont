@@ -26,11 +26,13 @@
   min-height: 70px;
   @media (max-width: $toBurger) {
     min-height: 60px;
+    justify-content: space-between;
   }
 
   > .usual-btn {
     margin-left: auto;
     @media (max-width: $toBurger) {
+
       display: none;
     }
   }
@@ -100,15 +102,24 @@
 
 .header__wrap-nav {
   transition: all $tr-time ease;
-  &.header__wrap-nav--open-blur {
+  @media (max-width:$toBurger) {
+
     width: 100vw;
     top: 0;
     left: 0;
+    opacity: 0;
+    visibility: hidden;
     height: 100vh;
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(5px);
     position: fixed;
     z-index: -1;
+
+    &.header__wrap-nav--open-blur {
+      //left: 0;
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 
@@ -121,11 +132,18 @@
     position: fixed;
     left: -100%;
     top: 0;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 53px);
+    width: 100%;
+    background: #FFFFFF;
+    max-width: 375px;
+    box-shadow: 20px -19px 20px rgba(0, 0,  0, .1);
+
+    flex-direction: column;
+    padding: 50px 10px 10px;
+    gap: 50px;
+
     &.header__nav--burg-open {
       left: 0;
-      flex-direction: column;
-      background: $light1;
     }
   }
 }
@@ -141,9 +159,38 @@
   color: $dark2;
   transition: color $tr-time ease;
 
+
   &:hover {
     color: $primary1;
   }
 
+  @media (max-width:$toBurger) {
+    font-family: $ff2;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    position: relative;
+    padding-left: 30px;
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        left: 0;
+        bottom: -25px;
+        background: $light5;
+
+      }
+    }
+  }
+
+}
+
+.header__call-btn-mb {
+  display: none;
+  @media (max-width:$toBurger) {
+    display: block;
+  }
 }
 

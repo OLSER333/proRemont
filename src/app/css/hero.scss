@@ -3,7 +3,7 @@
   position: relative;
   height: 780px;
   z-index:  $zi-hero; // под header
-  @media (max-width: $hero-to-mb) {
+  @media (max-width: $toBurger) {
     min-height: 607px;
     height: calc(100vh - 60px);
   }
