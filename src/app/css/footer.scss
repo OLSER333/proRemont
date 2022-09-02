@@ -76,7 +76,7 @@
   }
   &:nth-child(4) {
     grid-area: d;
-    @media (max-width:$footer-to-mb) {
+    @media (max-width:$footer-two-col) {
       justify-self: center;
     }
   }

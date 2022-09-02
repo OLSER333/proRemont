@@ -1,9 +1,21 @@
 .header {
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.04);
   background: #FFFFFF;
+  z-index: $zi-header;
+  transition: all $tr-time ease;
+
+
+  @media (max-width: $toBurger) {
+    position: sticky;
+    top: 0;
+    &.header--burg-open {
+      //position: fixed;
+      top: calc(100vh - 60px);
+    }
+  }
+
 
 }
-
 
 
 .header__container {
@@ -12,16 +24,73 @@
 
   gap: 15px;
   min-height: 70px;
-  @media (max-width:$toBurger) {
+  @media (max-width: $toBurger) {
     min-height: 60px;
   }
 
   > .usual-btn {
     margin-left: auto;
-    @media (max-width:$toBurger) {
+    @media (max-width: $toBurger) {
       display: none;
     }
   }
+}
+
+.header__wrap-burg {
+  display: none;
+  @media (max-width:$toBurger) {
+    display: flex;
+  }
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.header__burg {
+  position: relative;
+  background: $dark1;
+  width: 20px;
+  height: 2px;
+  border-radius: 5px;
+  transition: all $tr-time ease;
+
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: $dark1;
+    transition: all $tr-time ease;
+    border-radius: 5px;
+  }
+
+  &:before {
+    top: -8px;
+    left: 0;
+  }
+
+  &:after {
+    left: 0;
+    bottom: -8px;
+  }
+
+  &.header__burg--open {
+    background: transparent;
+  }
+
+  &.header__burg--open:before {
+    transform: rotate(-45deg);
+    top: 0
+  }
+
+  &.header__burg--open:after {
+    transform: rotate(45deg);
+    bottom: 0;
+  }
+
 }
 
 .header__logo {
@@ -29,10 +98,36 @@
   height: 52px;
 }
 
+.header__wrap-nav {
+  transition: all $tr-time ease;
+  &.header__wrap-nav--open-blur {
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    z-index: -1;
+  }
+}
+
 .header__nav {
   display: flex;
   gap: 10px;
+  transition: all $tr-time ease;
   @include adaptiveValue("gap", 70, 15, 1440, 1000);
+  @media (max-width: $toBurger) {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: calc(100vh - 60px);
+    &.header__nav--burg-open {
+      left: 0;
+      flex-direction: column;
+      background: $light1;
+    }
+  }
 }
 
 .header__nav-link {
