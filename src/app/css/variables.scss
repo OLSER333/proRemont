@@ -28,7 +28,7 @@ $primary2: #CB8A27;
 
 
 $maxW: 1440px; // 20 паддинги с обеих сторон
-$toBurger: 950px;
+$toBurger: 1000.98px;
 $mobile: 767.98px; // это когда переходит на бургер, просто так назвал
 $minW: 320.98px;
 $on768: 767.98px;
@@ -43,7 +43,9 @@ $header-hei: 60px; // в js надо менять будет
 //hero
 $hero-to-mb: 600.98px;
 
-
+//about
+$about-to-mb: 1000.98px;
+$about-next-break: 650.98px;
 
 //footer
 $footer-to-mb: 600.98px;

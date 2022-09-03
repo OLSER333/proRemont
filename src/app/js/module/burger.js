@@ -39,7 +39,7 @@ export default function() {
   })
 
   wrapNav.addEventListener('click',(e) => {
-    if(e.target.closest('.header__wrap-nav--open-blur')) {
+    if(e.target.closest('.header__wrap-nav--open-blur') && !e.target.closest('.header__nav')) {
       toggleBurg()
     }
   })
