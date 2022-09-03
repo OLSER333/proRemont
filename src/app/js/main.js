@@ -1,7 +1,6 @@
 import '../css/style.scss'
 
 import Swiper, {Navigation} from "swiper";
-import '../../../node_modules/swiper/swiper.scss';
 import '../../../node_modules/swiper/swiper-bundle.css';
 
 
@@ -24,14 +23,30 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: false,
     slidesPerView: 2,
     grabCursor: true,
+    slidesPerGroup: 1,
     centeredSlides: true,
-    initialSlide: 2,
+    initialSlide: 1,
     navigation: {
       clickable: true,
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.works__swiper-button-next',
+      prevEl: '.works__swiper-button-prev',
     },
 
+
+    breakpoints: {
+      // 320: {
+      //   slidesPerView: 1
+      // },
+      320: {
+        slidesPerView: 1,
+      },
+      800: {
+        slidesPerView: 2,
+      },
+      1440: {
+        slidesPerView: 3
+      }
+    }
   })
 
 
