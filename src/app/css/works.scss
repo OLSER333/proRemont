@@ -1,0 +1,122 @@
+.works {
+
+}
+
+.works__container {
+  padding: 200px 0;
+}
+
+
+.usual-header--another {
+  font-family: $ff2;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 88px;
+  color: $dark1;
+  text-align: center;
+  margin-bottom: 100px;
+
+  @media (max-width: $works-to-mb) {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 41px;
+    margin-bottom: 25px;
+  }
+}
+
+.swiper.works__swiper {
+
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+
+.works__swiper-wrapper {
+}
+
+
+.works__swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform .8s ease;
+
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+//!!
+.works__swiper-slide.swiper-slide.swiper-slide-next,
+.works__swiper-slide.swiper-slide.swiper-slide-prev {
+  transform: scale(0.8);
+
+}
+.works__swiper-slide.swiper-slide.swiper-slide-active {
+  transform: scale(1); // увеличение на 20%
+  transition: transform .8s ease;
+}
+
+
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+
+.swiper-button-next {
+}
+
+//!! стрелки на середку
+.works__swiper-button-next.swiper-button-next, .swiper-rtl .swiper-button-next {
+  right: 210px;
+  height: 40px;
+  width: 40px;
+  background: $primary1;
+  //position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    background: url("../img/arrow-right.svg") no-repeat;
+    //background-position: calc(50% - 20px) calc(50% - 20px);
+    height: 40px;
+    width: 40px;
+  }
+}
+.works__swiper-button-prev.swiper-button-prev, .swiper-rtl .swiper-button-prev {
+  left: 210px;
+  height: 40px;
+  width: 40px;
+  background: $primary1;
+  //position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    background: url("../img/arrow-left.svg") no-repeat;
+    //background-position: calc(50% - 20px) calc(50% - 20px);
+    height: 40px;
+    width: 40px;
+  }
+}
