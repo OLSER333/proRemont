@@ -1,0 +1,56 @@
+.reviews {
+  position: relative;
+}
+
+.reviews__bg {
+  background: url('../img/review-bg.png') 0 85% no-repeat;
+  //object-fit: cover;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.reviews__container {
+  @include adaptiveValue("padding-top", 90, 31, 1440, 375);
+}
+
+.reviews__up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.usual-header--reviews {
+  color: $light1;
+}
+
+.reviews__sub-text {
+  max-width: 350px;
+  font-family: $ff1;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: $light4;
+}
+
+.reviews__list {
+}
+
+.reviews__item {
+}
+
+.reviews__avatar {
+}
+
+.reviews__info {
+}
+
+.reviews__name-date {
+}
+
+.reviews__text {
+}
