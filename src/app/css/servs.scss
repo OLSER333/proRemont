@@ -1,5 +1,8 @@
 .servs {
   background: $main-bg-color;
+  @media (min-width:1100px) {
+    padding: 0 50px;
+  }
 }
 
 .servs__container {

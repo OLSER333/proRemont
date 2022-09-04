@@ -1,0 +1,206 @@
+.loyal {
+  background: $main-bg-color;
+  @media (max-width:450px) {
+    //background: #fff;
+  }
+}
+
+.loyal__container {
+  position: relative;
+  @include adaptiveValue("height", 672, 665, 1440, 400);
+  padding: 0;
+  overflow: hidden;
+
+  img {
+    //width: 100%;
+    //height: 100%;
+    object-fit: cover;
+  }
+}
+
+.loyal__head-block {
+  position: absolute;
+  z-index: $loyal-zi-middle;
+  max-width: 520px;
+  width: 100%;
+  max-height: 190px;
+  height: 100%;
+
+  padding: 40px;
+  background: $light1;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  p {
+    font-family: $ff1;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: $dark3;
+    max-width: 300px;
+  }
+
+  //left: 452px;
+  @include adaptiveValue("top", 90, 0, 1440, 950);
+  @include adaptiveValue("left", 452, 0, 1440, 520);
+  //right: ;
+  //left: calc(50% - 220px);
+
+  @media (max-width:420px) {
+    padding: 20px 5px;
+  }
+  //transform: translate(452px, 90px);
+  //@media (max-width: $maxW) {
+  //  @media (min-width: 400px) {
+  //    transform: translate(adaptiveValueR(452, 0, 1440, 400), adaptiveValueR(90, 0, 1440, 400));
+  //  }
+  //}
+
+}
+
+
+.loyal__cond {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  z-index: $loyal-zi-middle;
+  width: 100%;
+  height: 100%;
+
+  max-width: 460px;
+  max-height: 230px;
+  //left: 602px;
+  //top: 307px;
+  background: $light1;
+
+
+  font-family: $ff1;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: $dark3;
+
+  top: 307px;
+  @include adaptiveValue("left", 602, 0, 1440, 460);
+  @include adaptiveValue("top", 307, 422, 1440, 460);
+
+
+}
+
+.loyal__cond-header {
+  font-family: $ff2;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $primary1;
+}
+
+.loyal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  @media (max-width:600px) {
+    gap: 8px;
+  }
+}
+
+.loyal__item {
+  font-family: $ff1;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: $dark4;
+
+  span {
+    font-weight: 700;
+  }
+  @media (max-width: 450px) {
+    font-size: 13px;
+  }
+
+}
+
+.loyal__sale {
+  position: absolute;
+  z-index: $loyal-zi-nearest;
+  @include adaptiveValue("width", 180, 128, 1440, 375);
+  @include adaptiveValue("height", 180, 128, 1440, 375);
+  @include adaptiveValue("left", 352, 134, 1440, 375);
+  @include adaptiveValue("top", 217, 327, 1440, 375);
+
+  @media (max-width:375px) {
+    left: calc(50% - 64px);
+  }
+  background: $primary1;
+  color: $light1;
+  font-family: $ff2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  @include adaptiveValue("gap", 10, 0, 1440, 400);
+  padding: 25px;
+  @include adaptiveValue("padding", 25, 15, 1440, 320);
+
+  p:nth-child(2) {
+    font-weight: 500;
+    //font-size: 16px;
+    line-height: 24px;
+    @include adaptiveValue("font-size", 16, 12, 1440, 400);
+
+  }
+
+  p:nth-child(2) {
+
+    font-weight: 700;
+    line-height: 82px;
+    text-transform: uppercase;
+    @include adaptiveValue("font-size", 82, 59, 1440, 400);
+
+
+  }
+
+}
+
+.loyal__img-1 {
+  position: absolute;
+  left: 0;
+  object-position: left;
+  z-index: $loyal-zi-far;
+  @media (max-width: 800px) {
+    z-index: $loyal-zi-after-nearest;
+  }
+  @media (max-width: 450px) {
+    z-index: $loyal-zi-near-img;
+  }
+  @include adaptiveValue("width", 412, 160, 1440, 600);
+  @include adaptiveValue("height", 428, 252, 1440, 600);
+
+  @include adaptiveValue("top", 40, 146, 1440, 600);
+
+
+}
+
+.loyal__img-2 {
+  position: absolute;
+  z-index: $loyal-zi-far;
+  object-position: right;
+  @media (max-width: 800px) {
+    z-index: $loyal-zi-after-nearest;
+  }
+  @include adaptiveValue("width", 428, 196, 1440, 600);
+  @include adaptiveValue("width", 464, 220, 1440, 600);
+
+  @include adaptiveValue("top", 160, 176, 1440, 600);
+
+  @include adaptiveValue("right", 0, -40, 1440, 600);
+
+}
