@@ -97,6 +97,53 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
+  const swiperTeam = new Swiper('.team__swiper', {
+    // slidesPerView: 3,
+    loop: false,
+
+    // slidesPerView: 4,
+    // slidesPerGroup: 1,
+    // watchOverflow: true,
+    // centeredSlides: true,
+
+
+
+
+    breakpoints: {
+      // 320: {
+      //   slidesPerView: 1
+      // },
+      320: {
+        slidesPerView: 1.2,
+      },
+      380: {
+        slidesPerView: 1.4,
+      },
+      550: {
+        slidesPerView: 1.7,
+      },
+      800: {
+        slidesPerView: 2.4,
+      },
+      1000: {
+        slidesPerView: 3.4,
+      },
+      1200: {
+        slidesPerView: 4,
+        // centeredSlides: true,
+
+      },
+      1440: {
+        slidesPerView: 4,
+
+        // slidesPerGroup: 4,
+        // centerInsufficientSlides: true,
+        // initialSlide: 3,
+
+
+      }
+    }
+  })
 
 
 
