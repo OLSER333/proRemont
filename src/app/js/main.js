@@ -50,6 +50,52 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
 
+  const swiperServs = new Swiper('.servs__swiper', {
+    // slidesPerView: 3,
+    spaceBetween: 0,
+    loop: false,
+    // slidesPerView: 4,
+    // slidesPerGroup: 1,
+    // watchOverflow: true,
+    // centeredSlides: true,
+
+
+
+
+    breakpoints: {
+      // 320: {
+      //   slidesPerView: 1
+      // },
+      320: {
+        slidesPerView: 1.3,
+      },
+      440: {
+        slidesPerView: 1.5,
+      },
+      500: {
+        slidesPerView: 1.8,
+      },
+      700: {
+        slidesPerView: 2.5,
+      },
+      900: {
+        slidesPerView: 3.5,
+      },
+      1100: {
+        slidesPerView: 4,
+        // centeredSlides: true,
+
+      },
+      1440: {
+        slidesPerView: 4,
+        // slidesPerGroup: 4,
+        // centerInsufficientSlides: true,
+        // initialSlide: 3,
+
+
+      }
+    }
+  })
 
 
 
