@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: false,
     slidesPerView: 2,
     grabCursor: true,
+    simulateTouch: true,
     slidesPerGroup: 1,
     centeredSlides: true,
     initialSlide: 1,

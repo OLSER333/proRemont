@@ -93,7 +93,13 @@
   }
 }
 
+.works__swiper-button-next.swiper-button-next,
+.works__swiper-button-prev.swiper-button-prev {
+  transition: all $tr-time ease;
+}
+
 .works__swiper-button-next.swiper-button-next, .swiper-rtl .swiper-button-next {
+
   @media (min-width: $maxW) {
     right: 30%;
   }
