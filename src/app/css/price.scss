@@ -1,0 +1,137 @@
+
+.price {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.price__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: 1440px) {
+      object-position: 0 80%;
+    }
+    @media (max-width: 1440px) {
+      width: 65%;
+    }
+    @media (max-width: 1100px) {
+      object-position: 95%;
+    }
+
+  }
+
+  @media (max-width: $price-to-mb) {
+    position: static;
+    img {
+      width: 100%;
+    }
+  }
+
+
+  //background: url('../img/price-bg.png') -300px 85% no-repeat;
+  ////object-fit: cover;
+  //background-size: cover;
+  //position: absolute;
+  //left: 0;
+  //width: 100%;
+  //height: 100%;
+  //z-index: -1;
+}
+
+.price__container {
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: $price-to-mb) {
+    justify-content: center;
+  }
+}
+
+.price__inner {
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 520px;
+  background: $light1;
+  @media (max-width: $price-to-mb) {
+    max-width: 100%;
+  }
+}
+
+.usual-header--price {
+  text-align: center;
+}
+
+.price__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.price__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.price__info-top {
+  display: flex;
+  gap: 3px;
+}
+
+.price__title {
+  /* H/5 */
+
+  font-family: $ff2;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $dark2;
+}
+
+.price__dots {
+  flex: 1 0 auto;
+  border-bottom: 3px dotted $light4;
+  transform: translateY(-3px);
+  color: $light4;
+}
+
+.price__item-price {
+  /* H/5 */
+
+  font-family: $ff2;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $primary1;
+}
+
+.price__info-bottom {
+  font-family: $ff1;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark4;
+  @media (max-width: $price-to-mb) {
+    //max-width: 275px;
+  }
+}
+
+.price__btn-pc {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
