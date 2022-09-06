@@ -1,0 +1,164 @@
+.quiz {
+
+}
+
+.quiz__container {
+  padding: 60px 100px;
+
+}
+
+.quiz__swiper {
+}
+
+.swiper {
+}
+
+.quiz__swiper-wrapper {
+}
+
+.swiper-wrapper {
+}
+
+.quiz__swiper-slide {
+  background: #2D2D2D;
+}
+
+.q-slide {
+  display: flex;
+  flex-direction: column;
+
+
+  @media (max-width: $mobile) {
+    //padding: 20px;
+  }
+
+}
+
+.q-slide__top {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid $light3;
+  padding: 20px 50px;
+
+  @media (max-width: $quiz-to-mb) {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+}
+
+.q-slide__top-usual-text {
+  font-family: $ff2;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: $light4;
+  max-width: 275px;
+}
+
+.q-slide__middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 75px 50px;
+
+  @media (max-width: $quiz-to-mb) {
+    padding: 20px;
+  }
+}
+
+.q-slide__form {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+  @media (max-width: $quiz-to-mb) {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+}
+
+.q-slide__form-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  label {
+    max-width: 220px;
+    max-height: 220px;
+  }
+
+
+}
+
+.q-slide__title {
+
+  /* H/5 */
+
+  font-family: $ff2;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: $light1;
+  text-align: center;
+
+}
+
+.q-slide__text {
+  /* Text/2 */
+
+  font-family: $ff1;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  color: #B9AE9D;
+}
+
+.q-slide__bottom {
+
+
+
+}
+
+.q-slide__question {
+  display: flex;
+  align-items: center;
+
+  font-family: $ff2;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: $light3;
+
+  padding: 20px 50px;
+  @media (min-width: $quiz-to-mb) {
+    border-top: 2px solid $light3;
+
+  }
+  @media (max-width: $quiz-to-mb) {
+    border-bottom: 2px solid $light3;
+    padding: 20px;
+  }
+}
+
+//==================================================================
+.quiz__pagination {
+}
+
+.swiper-pagination {
+}
+
+.quiz__swiper-button-prev {
+}
+
+.swiper-button-prev {
+}
+
+.quiz__swiper-button-next {
+}
+
+.swiper-button-next {
+}

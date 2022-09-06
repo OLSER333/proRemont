@@ -1,6 +1,6 @@
 import '../css/style.scss'
 
-import Swiper, {Navigation} from "swiper";
+import Swiper, {Navigation, Pagination} from "swiper";
 import '../../../node_modules/swiper/swiper-bundle.css';
 
 
@@ -122,6 +122,35 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 4,
       }
     }
+  })
+
+  const swiperQuiz = new Swiper('.quiz__swiper', {
+    modules: [Pagination, Navigation],
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: false,
+    allowTouchMove: false,
+
+
+    pagination: {
+      el: '.quiz__pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<span class="dot swiper-pagination-bullet">${index}</span>`;
+      },
+    },
+    navigation: {
+      nextEl: '.quiz__swiper-button-next',
+      prevEl: '.quiz__swiper-button-prev',
+    },
+    // simulateTouch: false,
+    // slidesPerView: 4,
+    // slidesPerGroup: 1,
+    // watchOverflow: true,
+    // centeredSlides: true,
+
+
+
   })
 
 
