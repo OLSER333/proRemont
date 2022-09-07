@@ -134,9 +134,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     pagination: {
       el: '.quiz__pagination',
-      clickable: true,
+      // clickable: true,
       renderBullet: function (index, className) {
-        return `<span class="dot swiper-pagination-bullet">${index}</span>`;
+        return `<span class="dot swiper-pagination-bullet">${index + 1}</span>`;
       },
     },
     navigation: {
