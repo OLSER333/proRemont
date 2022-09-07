@@ -291,11 +291,33 @@
                 <div class="q-slide__top-usual-text">Получите смету и консультацию дизайнера ответив на 5 вопросов:
                 </div>
               </div>
+              <div class="q-slide__last-content">
+                <div class="q-slide__congrat">
+                  <img src="./app/img/quiz-last.png" alt="">
+                  <div class="q-slide__congrat-txt">
+                    <p>ПОЗДРАВЛЯЕМ!</p>
+                    <p>Вы успешно ответили на все вопросы и получаете в подарок бесплатную смету и консультацию дизайнера</p>
+                  </div>
+                </div>
+                <div class="q-slide__give-tel-txt">Оставьте ваш номер телефона для рассчета сметы</div>
+                <form class="q-slide__inp">
+                  <label class="usual-label" for="quiz-phone">Введите ваш номер телефона</label>
+                  <input class="usual-inp" type="tel" id="quiz-phone" name="phone" pattern="[+]{1}[0-9]{11,14}" required>
+                </form>
+                <button class="usual-btn usual-btn--send-quiz">Получить бесплатную смету</button>
+              </div>
+            </li>
+
+            <li class="quiz__swiper-slide swiper-slide q-slide">
+              <div class="q-slide__top">
+                <div class="q-slide__top-usual-text">Получите смету и консультацию дизайнера ответив на 5 вопросов:
+                </div>
+              </div>
               <div class="q-slide__content">
                 <form class="q-slide__form">
-                  <div class="q-slide__form-item">
+                  <div class="q-slide__form-item hover-quiz">
 
-                    <input type="radio" name="slide-1" id="first-1">
+                    <input value="Без отделки" type="radio" name="slide-1" id="first-1">
                     <label for="first-1"><img src="./app/img/slide1-2.png" alt="Без отделки"></label>
                     <div class="quiz__content-text">
                       <p class="q-slide__title">Без отделки</p>
@@ -303,24 +325,75 @@
                         и стяжки пола</p>
                     </div>
                   </div>
-                  <div class="q-slide__form-item">
+                  <div class="q-slide__form-item hover-quiz">
 
-                    <input type="radio" name="slide-1" id="first-2">
+                    <input value="Предчистовая отделка" type="radio" name="slide-1" id="first-2">
                     <label for="first-2"><img src="./app/img/slide1-2.png" alt="Без отделки"></label>
                     <div class="quiz__content-text">
                       <p class="q-slide__title">Предчистовая отделка</p>
                       <p class="q-slide__text">Стены оштукатурены, сделана стяжка пола</p>
                     </div>
                   </div>
-                  <div class="q-slide__form-item">
+                  <div class="q-slide__form-item hover-quiz">
 
-                    <input type="radio" name="slide-1" id="first-3">
+                    <input value="Старая отделка" type="radio" name="slide-1" id="first-3">
                     <label for="first-3"><img src="./app/img/slide1-2.png" alt="Без отделки"></label>
                     <div class="quiz__content-text">
                       <p class="q-slide__title">Старая отделка</p>
                       <p class="q-slide__text">Есть ремонт, который нужно переделать</p>
                     </div>
                   </div>
+                </form>
+              </div>
+              <div class="q-slide__question">
+                В каком состоянии ваша квартира?
+              </div>
+            </li>
+            <li class="quiz__swiper-slide swiper-slide q-slide">
+              <div class="q-slide__top">
+                <div class="q-slide__top-usual-text">Получите смету и консультацию дизайнера ответив на 5 вопросов:
+                </div>
+              </div>
+              <div class="q-slide__content">
+                <form class="q-slide__form">
+                  <div class="q-slide__form-item">
+
+                    <input value="Студия" type="radio" name="slide-2" id="second-1">
+                    <label for="second-1"><img src="./app/img/quiz-2.1.svg" alt="Студия"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">Студия</p>
+                      <p class="q-slide__text">Небольшая квартира без внутренних перегородок</p>
+                    </div>
+                  </div>
+                  <div class="q-slide__form-item">
+
+                    <input value="Однокомнатная квартира" type="radio" name="slide-2" id="second-2">
+                    <label for="second-2"><img src="./app/img/quiz-2.2.svg" alt="Однокомнатная квартира"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">1</p>
+                      <p class="q-slide__text">Однокомнатная квартира</p>
+                    </div>
+                  </div>
+                  <div class="q-slide__form-item">
+
+                    <input value="Двухкомнатная квартира" type="radio" name="slide-2" id="second-3">
+                    <label for="second-3"><img src="./app/img/quiz-2.3.svg" alt="Двухкомнатная квартира"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">2</p>
+                      <p class="q-slide__text">Двухкомнатная квартира</p>
+                    </div>
+                  </div>
+
+                  <div class="q-slide__form-item">
+
+                    <input value="Квартира с тремя комнатами и более" type="radio" name="slide-2" id="second-4">
+                    <label for="second-4"><img src="./app/img/quiz-2.4.svg" alt="Квартира с тремя комнатами и более"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">3+</p>
+                      <p class="q-slide__text">Квартира с тремя комнатами и более</p>
+                    </div>
+                  </div>
+
                 </form>
               </div>
               <div class="q-slide__question">
@@ -334,34 +407,26 @@
               </div>
               <div class="q-slide__content">
                 <form class="q-slide__form">
-                  <div class="q-slide__form-item">
+                  <div class="q-slide__form-item hover-quiz">
 
-                    <input type="radio" name="first-4" id="first-4">
-                    <label for="first-4"><img src="./app/img/slide1-2.png" alt="Без отделки"></label>
+                    <input value="Уже есть" type="radio" name="slide-3" id="third-1">
+                    <label for="third-1"><img src="./app/img/slide1-2.png" alt="Без отделки"></label>
                     <div class="quiz__content-text">
-                      <p class="q-slide__title">Без отделки</p>
-                      <p class="q-slide__text">Нет штукатурки стен
-                        и стяжки пола</p>
+                      <p class="q-slide__title">Уже есть</p>
                     </div>
                   </div>
-                  <div class="q-slide__form-item">
+                  <div class="q-slide__form-item hover-quiz">
 
-                    <input type="radio" name="first-4" id="first-5">
-                    <label for="first-5"><img src="./app/img/slide1-2.png" alt="Без отделки"></label>
-                    <p class="q-slide__title">Предчистовая отделка</p>
-                    <p class="q-slide__text">Стены оштукатурены, сделана стяжка пола</p>
-                  </div>
-                  <div class="q-slide__form-item">
-
-                    <input type="radio" name="first-4" id="first-6">
-                    <label for="first-6"><img src="./app/img/slide1-2.png" alt="Без отделки"></label>
-                    <p class="q-slide__title">Старая отделка</p>
-                    <p class="q-slide__text">Есть ремонт, который нужно переделать</p>
+                    <input value="Пока нет" type="radio" name="slide-3" id="third-2">
+                    <label for="third-2"><img src="./app/img/slide1-2.png" alt="Без отделки"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">Пока нет</p>
+                    </div>
                   </div>
                 </form>
               </div>
               <div class="q-slide__question">
-                В каком состоянии ваша квартира?
+                У вас есть дизайн проект?
               </div>
             </li>
             <li class="quiz__swiper-slide swiper-slide q-slide">
@@ -373,108 +438,38 @@
                 <form class="q-slide__form">
                   <div class="q-slide__form-item">
 
-                    <input type="radio" name="slide-1" id="first-1">
-                    <label for="first-1"><img src="./app/img/slide1-1.png" alt="Без отделки"></label>
+                    <input value="До 30 кв/м" type="radio" name="slide-4" id="fourth-1">
+                    <label for="fourth-1"><img src="./app/img/quiz-4.1.svg" alt="Маленькая квартира"></label>
                     <div class="quiz__content-text">
-                      <p class="q-slide__title">Без отделки</p>
-                      <p class="q-slide__text">Нет штукатурки стен
-                        и стяжки пола</p>
+                      <p class="q-slide__title">Маленькая квартира</p>
+                      <p class="q-slide__text">До 30 кв/м</p>
                     </div>
                   </div>
                   <div class="q-slide__form-item">
 
-                    <input type="radio" name="slide-1" id="first-2">
-                    <label for="first-2"><img src="./app/img/slide1-1.png" alt="Без отделки"></label>
-                    <p class="q-slide__title">Предчистовая отделка</p>
-                    <p class="q-slide__text">Стены оштукатурены, сделана стяжка пола</p>
-                  </div>
-                  <div class="q-slide__form-item">
-
-                    <input type="radio" name="slide-1" id="first-3">
-                    <label for="first-3"><img src="./app/img/slide1-1.png" alt="Без отделки"></label>
-                    <p class="q-slide__title">Старая отделка</p>
-                    <p class="q-slide__text">Есть ремонт, который нужно переделать</p>
-                  </div>
-                </form>
-              </div>
-              <div class="q-slide__question">
-                В каком состоянии ваша квартира?
-              </div>
-            </li>
-            <li class="quiz__swiper-slide swiper-slide q-slide">
-              <div class="q-slide__top">
-                <div class="q-slide__top-usual-text">Получите смету и консультацию дизайнера ответив на 5 вопросов:
-                </div>
-              </div>
-              <div class="q-slide__content">
-                <form class="q-slide__form">
-                  <div class="q-slide__form-item">
-
-                    <input type="radio" name="slide-1" id="first-1">
-                    <label for="first-1"><img src="./app/img/slide1-1.png" alt="Без отделки"></label>
+                    <input value="От 30 до 60 кв/м" type="radio" name="slide-4" id="fourth-2">
+                    <label for="fourth-2"><img src="./app/img/quiz-4.2.svg" alt="Квартира среднего размера"></label>
                     <div class="quiz__content-text">
-                      <p class="q-slide__title">Без отделки</p>
-                      <p class="q-slide__text">Нет штукатурки стен
-                        и стяжки пола</p>
+                      <p class="q-slide__title">Квартира среднего размера</p>
+                      <p class="q-slide__text">От 30 до 60 кв/м</p>
                     </div>
                   </div>
                   <div class="q-slide__form-item">
 
-                    <input type="radio" name="slide-1" id="first-2">
-                    <label for="first-2"><img src="./app/img/slide1-1.png" alt="Без отделки"></label>
-                    <p class="q-slide__title">Предчистовая отделка</p>
-                    <p class="q-slide__text">Стены оштукатурены, сделана стяжка пола</p>
-                  </div>
-                  <div class="q-slide__form-item">
-
-                    <input type="radio" name="slide-1" id="first-3">
-                    <label for="first-3"><img src="./app/img/slide1-1.png" alt="Без отделки"></label>
-                    <p class="q-slide__title">Старая отделка</p>
-                    <p class="q-slide__text">Есть ремонт, который нужно переделать</p>
-                  </div>
-                </form>
-              </div>
-              <div class="q-slide__question">
-                В каком состоянии ваша квартира?
-              </div>
-            </li>
-            <li class="quiz__swiper-slide swiper-slide q-slide">
-              <div class="q-slide__top">
-                <div class="q-slide__top-usual-text">Получите смету и консультацию дизайнера ответив на 5 вопросов:
-                </div>
-              </div>
-              <div class="q-slide__content">
-                <form class="q-slide__form">
-                  <div class="q-slide__form-item">
-
-                    <input type="radio" name="slide-1" id="first-1">
-                    <label for="first-1"><img src="./app/img/slide1-1.png" alt="Без отделки"></label>
+                    <input value="От 60 кв/м" type="radio" name="slide-4" id="fourth-3">
+                    <label for="fourth-3"><img src="./app/img/quiz-4.3.svg" alt="Большая квартира"></label>
                     <div class="quiz__content-text">
-                      <p class="q-slide__title">Без отделки</p>
-                      <p class="q-slide__text">Нет штукатурки стен
-                        и стяжки пола</p>
+                      <p class="q-slide__title">Большая квартира</p>
+                      <p class="q-slide__text">От 60 кв/м</p>
                     </div>
                   </div>
-                  <div class="q-slide__form-item">
-
-                    <input type="radio" name="slide-1" id="first-2">
-                    <label for="first-2"><img src="./app/img/slide1-1.png" alt="Без отделки"></label>
-                    <p class="q-slide__title">Предчистовая отделка</p>
-                    <p class="q-slide__text">Стены оштукатурены, сделана стяжка пола</p>
-                  </div>
-                  <div class="q-slide__form-item">
-
-                    <input type="radio" name="slide-1" id="first-3">
-                    <label for="first-3"><img src="./app/img/slide1-1.png" alt="Без отделки"></label>
-                    <p class="q-slide__title">Старая отделка</p>
-                    <p class="q-slide__text">Есть ремонт, который нужно переделать</p>
-                  </div>
                 </form>
               </div>
               <div class="q-slide__question">
-                В каком состоянии ваша квартира?
+                Какого размера ваша квартира?
               </div>
             </li>
+
 
           </ul>
 

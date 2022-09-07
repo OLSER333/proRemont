@@ -14,6 +14,7 @@ export default function() {
     header.classList.toggle('header--burg-open')
     nav.classList.toggle('header__nav--burg-open')
     wrapNav.classList.toggle('header__wrap-nav--open-blur')
+    document.body.classList.toggle('lock')
   }
 
   if(document.documentElement.clientWidth <= v.toBurger) {

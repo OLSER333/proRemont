@@ -6,6 +6,8 @@ import '../../../node_modules/swiper/swiper-bundle.css';
 
 
 import burger from "./module/burger";
+import quiz from "./module/quiz";
+
 import swipers from './module/swipers'
 import initSliders from "./module/swipers";
 
@@ -15,6 +17,7 @@ import initSliders from "./module/swipers";
 
 document.addEventListener("DOMContentLoaded", () => {
   burger()
+  quiz()
   // initSliders()
   const swiperWork = new Swiper('.works__swiper', {
     modules: [Navigation],
@@ -152,6 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   })
+
 
 
 

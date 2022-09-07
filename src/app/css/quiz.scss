@@ -83,6 +83,10 @@
   justify-content: center;
   padding: 75px 50px;
 
+  @media (min-width:$quiz-to-mb) {
+    min-height: 456px;
+  }
+
   @media (max-width: $quiz-to-mb) {
     order: 3;
     padding: 20px;
@@ -125,7 +129,7 @@
     height: 40px;
     border-radius: 50%;
     z-index: 10;
-    @media (max-width:$quiz-to-mb) {
+    @media (max-width: $quiz-to-mb) {
       width: 30px;
       height: 30px;
       right: 2%;
@@ -164,9 +168,7 @@
       //width: 220px;
       //height: 220px;
       object-fit: cover;
-      filter: grayscale(1);
       pointer-events: none;
-      transition: all $tr-time ease;
       border: 1px solid transparent;
 
 
@@ -177,17 +179,6 @@
       //max-width: 145px;
       //max-height: 100px;
     }
-  }
-
-  label:hover {
-    box-sizing: border-box;
-    cursor: pointer;
-    img {
-      transition: all $tr-time ease;
-      border: 1px solid $primary1;
-      filter: none;
-    }
-
   }
 
 
@@ -376,3 +367,68 @@
 .swiper-button-prev.swiper-button-disabled {
   //display: none;
 }
+
+
+.hover-quiz {
+  label {
+
+    img {
+      filter: grayscale(1);
+      transition: all $tr-time ease;
+    }
+
+  }
+
+  label:hover {
+    box-sizing: border-box;
+    cursor: pointer;
+
+    img {
+      transition: all $tr-time ease;
+      border: 1px solid $primary1;
+      filter: none;
+    }
+
+  }
+}
+
+//==last-quiz========================================================
+
+.q-slide__last-content {
+}
+
+.q-slide__congrat {
+}
+
+.q-slide__congrat-txt {
+}
+
+.q-slide__give-tel-txt {
+  font-family: $ff1;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  color: $light3;
+}
+
+.q-slide__inp {
+}
+
+.usual-label {
+  font-family: $ff1;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 33px;
+  color: $light1;
+}
+
+.usual-inp {
+}
+
+.usual-btn {
+}
+
+.usual-btn--send-quiz {
+}
+
