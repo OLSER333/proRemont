@@ -9,6 +9,14 @@ export default function() {
   const wrapNav = document.querySelector('.header__wrap-nav')
 
 
+  nav.addEventListener('click', (e) => {
+    if (e.target.localName === 'a' && burg.classList.contains('header__burg--open')) {
+      toggleBurg()
+    }
+  })
+
+
+
   function toggleBurg() {
     burg.classList.toggle('header__burg--open')
     header.classList.toggle('header--burg-open')

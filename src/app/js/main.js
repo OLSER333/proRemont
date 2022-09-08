@@ -4,20 +4,24 @@ import Swiper, {Navigation, Pagination} from "swiper";
 import '../../../node_modules/swiper/swiper-bundle.css';
 
 
-
 import burger from "./module/burger";
 import quiz from "./module/quiz";
 
 import swipers from './module/swipers'
 import initSliders from "./module/swipers";
-
+import maskPhone from "./module/maskPhone";
+import smoothAnchors from "./module/smooth-anchors";
+import modal from "./module/modal";
 
 
 // import v from "./module/v";
 
 document.addEventListener("DOMContentLoaded", () => {
   burger()
+  modal()
   quiz()
+  maskPhone()
+  smoothAnchors()
   // initSliders()
   const swiperWork = new Swiper('.works__swiper', {
     modules: [Navigation],
@@ -38,9 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     breakpoints: {
-      // 320: {
-      //   slidesPerView: 1
-      // },
       320: {
         slidesPerView: 1,
       },
@@ -61,8 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // slidesPerGroup: 1,
     // watchOverflow: true,
     // centeredSlides: true,
-
-
 
 
     breakpoints: {
@@ -137,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     pagination: {
       el: '.quiz__pagination',
-      // clickable: true,
+      clickable: true,
       renderBullet: function (index, className) {
         return `<span class="dot swiper-pagination-bullet">${index + 1}</span>`;
       },
@@ -146,17 +145,9 @@ document.addEventListener("DOMContentLoaded", () => {
       nextEl: '.quiz__swiper-button-next',
       prevEl: '.quiz__swiper-button-prev',
     },
-    // simulateTouch: false,
-    // slidesPerView: 4,
-    // slidesPerGroup: 1,
-    // watchOverflow: true,
-    // centeredSlides: true,
-
 
 
   })
-
-
 
 
 })

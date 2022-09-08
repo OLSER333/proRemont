@@ -149,6 +149,7 @@
 }
 
 .header__nav-link {
+  display: inline-flex;
   font-family: $ff1;
   font-weight: 400;
   font-size: 15px;
@@ -191,6 +192,8 @@
   display: none;
   @media (max-width:$toBurger) {
     display: block;
+    width: 40px;
+    height: 40px;
   }
 }
 

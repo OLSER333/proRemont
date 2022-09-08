@@ -1,5 +1,4 @@
 .about {
-  //@include adaptiveValue("padding-top", 130, 60, 1440, 950);
 
   @media (min-width: $about-to-mb) {
     padding-top: 130px;
@@ -75,7 +74,6 @@
 
     img {
       max-width: 250px;
-      //@include adaptiveValue("max-width", 250, 150, 1000, 600);
     }
   }
   @media (max-width:$about-next-break){
@@ -156,15 +154,11 @@
     align-items: center;
     flex-direction: column;
     gap: 15px;
-    //transform: translateY( -15px);
-
 
     @media (max-width: 1200px) {
-      //transform: translateX(adaptiveValueR(0, -230, 1440, 1140));
       justify-self: start;
       margin-top: 50px;
       margin-left: 170px;
-      //@include adaptiveValue("margin-left", 170, 100, 1200, 1000px);
     }
 
     p:nth-child(1) {

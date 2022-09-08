@@ -83,7 +83,7 @@
   justify-content: center;
   padding: 75px 50px;
 
-  @media (min-width:$quiz-to-mb) {
+  @media (min-width: $quiz-to-mb) {
     min-height: 456px;
   }
 
@@ -146,21 +146,20 @@
 
   label {
     position: relative;
-    //max-width: 220px;
-    //max-height: 220px;
     margin-bottom: 10px;
     transition: all $tr-time ease;
 
     @media (max-width: $quiz-to-mb) {
-      height: 175px;
-
+      //height: 175px;
+      flex: 0 1 50%;
       margin: 0;
-      flex-basis: 40%;
+
 
     }
 
     @media (max-width: 450px) {
       min-width: 140px;
+      flex-basis: 40%;
       //height: auto;
     }
 
@@ -168,20 +167,12 @@
     img {
       width: 100%;
       height: 100%;
-      //width: 220px;
-      //height: 220px;
       object-fit: cover;
       pointer-events: none;
       border: 1px solid transparent;
-
-
-      //aspect-ratio: 1 / 1;
     }
 
-    @media (max-width: $quiz-to-mb) {
-      //max-width: 145px;
-      //max-height: 100px;
-    }
+
   }
 
 
@@ -272,12 +263,16 @@
   }
 }
 
+.dot.swiper-pagination-bullet.swiper-pagination-bullet-done {
+  opacity: unset;
+  background: unset;
+  color: $primary1;
+}
+
 .dot.swiper-pagination-bullet.swiper-pagination-bullet-active {
   color: $light1;
   opacity: unset;
   background: unset;
-
-
 }
 
 .dot.swiper-pagination-bullet {
@@ -400,7 +395,7 @@
 .q-slide__last-content {
   display: flex;
   align-items: center;
-  @media (max-width:$quiz-to-mb) {
+  @media (max-width: $quiz-to-mb) {
     flex-direction: column;
     gap: 50px;
     padding: 0 20px;
@@ -413,8 +408,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width:$quiz-to-mb) {
-        //min-height: 456px;
+  @media (max-width: $quiz-to-mb) {
+    //min-height: 456px;
     border: none;
     margin-top: 50px;
   }
@@ -433,11 +428,11 @@
     //width: 100%;
     //height: 100%;
     object-fit: cover;
-    @media (max-width:$quiz-to-mb) {
+    @media (max-width: $quiz-to-mb) {
       width: 400px;
 
     }
-    @media (max-width:400px) {
+    @media (max-width: 400px) {
       width: 100vw;
     }
   }
@@ -446,17 +441,17 @@
 .q-slide__congrat-txt {
   position: absolute;
   top: 25%;
-  left: calc(50% - 200px) ;
+  left: calc(50% - 200px);
   max-width: 400px;
   width: 100%;
   padding: 20px;
   //max-height: 346px;
 
-  @media (max-width:$quiz-to-mb) {
+  @media (max-width: $quiz-to-mb) {
     top: 15%;
     padding: 40px
   }
-  @media (max-width:400px) {
+  @media (max-width: 400px) {
     left: 0;
     top: 0;
     padding: 10px;
@@ -464,6 +459,7 @@
 
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(30px);
+
   p:nth-child(1) {
     text-align: center;
     font-family: $ff2;
@@ -473,6 +469,7 @@
     text-transform: uppercase;
     color: $dark1;
   }
+
   p:nth-child(2) {
 
     font-family: $ff1;
@@ -533,6 +530,7 @@
   width: 100%;
   max-width: 340px;
   padding: 15px;
+
   &::placeholder {
     font-family: $ff1;
     font-style: normal;
@@ -551,6 +549,7 @@
 }
 
 .q-slide__after-quiz {
+  margin: 0 auto;
   max-width: 500px;
   font-family: $ff1;
   font-weight: 800;
@@ -561,5 +560,10 @@
 }
 
 .quiz-hidden {
+  display: none;
+}
+
+.quiz-hidden.quiz__swiper-button-prev.swiper-button-prev,
+.quiz-hidden.quiz__swiper-button-next.swiper-button-next {
   display: none;
 }

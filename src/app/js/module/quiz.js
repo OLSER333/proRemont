@@ -8,11 +8,13 @@ export default function () {
   const nextBtn = document.querySelector('.quiz__swiper-button-next')
   const prevBtn = document.querySelector('.quiz__swiper-button-prev')
 
-  console.log("where&???")
+  const pagin = document.querySelector('.quiz__pagination')
+
+
   setTimeout(() => {
     nextBtn.classList.add('swiper-button-disabled');
+    prevBtn.classList.add('quiz-hidden')
   }, 0)
-  console.log(nextBtn.classList)
 
   const qState = {
     //!!!!!
@@ -27,46 +29,45 @@ export default function () {
 
 
 
-  console.log('allForms', allForms)
   allForms.forEach((el, idx) => {
     el.addEventListener('input', (e) => {
-      console.log('input: ', e.target.value)
-      console.log(el, idx)
       qState.dataToMail[idx] = e.target.value
-      console.log('want remove')
       nextBtn.classList.remove('swiper-button-disabled')
 
+
+      const paginDots = document.querySelectorAll('.swiper-pagination-bullet')
+      paginDots[qState.curPos].classList.add('swiper-pagination-bullet-done')
     })
   })
 
-// del
-  //==================================================================
-  const button = document.querySelector('.usual-header--serv')
-  button.addEventListener('click', () => {
-    console.log('answ', qState.dataToMail)
-    console.log('data', qState)
-  })
-  //==================================================================
-
   nextBtn.addEventListener('click', () => {
     if (qState.dataToMail.includes('')) {
-      console.log('realy, includes, cur pos ', qState.curPos)
+
       if (qState.dataToMail[qState.curPos + 1] === '') { // если ещё не выбирали
-        console.log("have ''", qState.dataToMail[qState.curPos+1])
+
         // ассинхронность т.к. swiper переназначает классы
         setTimeout(() => {
           nextBtn.classList.add('swiper-button-disabled');
         }, 0)
       }
-    } else {
-      // выбрали последний элемент, хотят нажать на след слайд -> поменять текст в кнопке и дать 5-ый слайд.?
-      // или hidden + новые кнопки и т д??
-      // если hidden - вспомни убрать его при шаге назад
+    } else if(qState.curPos + 1 === qState.dataToMail.length) {
+      setTimeout(() => {
+        prevBtn.classList.add('quiz-hidden')
+        nextBtn.classList.add('quiz-hidden')
+      }, 0)
+
     }
+    if(qState.curPos === 0) {
+      prevBtn.classList.remove('quiz-hidden')
+    }
+
     qState.curPos++
   })
 
   prevBtn.addEventListener('click', () => {
+    if(qState.curPos === 1) {
+      prevBtn.classList.add('quiz-hidden')
+    }
     qState.curPos--;
   })
 
@@ -84,7 +85,9 @@ export default function () {
     qState.dataToMail.push(document.querySelector('#quiz-phone').value)
 
       //! !!!  ЭТО НА ПОЧТУУУУУУУУУУУУУУ
-    console.log('То что должно отправляться на почту', qState.dataToMail)
+    console.log('На почту ', qState.dataToMail)
+    //! !!!  ЭТО НА ПОЧТУУУУУУУУУУУУУУ
+
 
     document.querySelector('.q-slide__after-quiz').classList.remove('quiz-hidden')
     document.querySelector('.q-slide__send-form').classList.add('quiz-hidden')

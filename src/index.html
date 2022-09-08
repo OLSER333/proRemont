@@ -18,23 +18,23 @@
       <a href="/"><img class="header__logo" src="./app/img/logo.png" alt="logo"></a>
       <nav class="header__wrap-nav">
         <ul class="header__nav ">
-          <li class="header__nav-link"><a href="#">Преимущества</a></li>
-          <li class="header__nav-link"><a href="#">Портфолио</a></li>
-          <li class="header__nav-link"><a href="#">Услуги</a></li>
-          <li class="header__nav-link"><a href="#">Акции</a></li>
-          <li class="header__nav-link"><a href="#">Наша&nbsp;команда</a></li>
-          <li class="header__nav-link"><a href="#">Отзывы</a></li>
-          <li class="header__nav-link"><a href="#">Стоимость</a></li>
+          <li class="header__nav-link"><a href="#section-about">Преимущества</a></li>
+          <li class="header__nav-link"><a href="#section-works">Портфолио</a></li>
+          <li class="header__nav-link"><a href="#section-servs">Услуги</a></li>
+          <li class="header__nav-link"><a href="#section-loyal">Акции</a></li>
+          <li class="header__nav-link"><a href="#section-team">Наша&nbsp;команда</a></li>
+          <li class="header__nav-link"><a href="#section-reviews">Отзывы</a></li>
+          <li class="header__nav-link"><a href="#section-price">Стоимость</a></li>
         </ul>
       </nav>
-      <button class="usual-btn">Вызвать&nbsp;замерщика</button>
-      <button class="header__call-btn-mb">
+      <button class="usual-btn" data-open-modal>Вызвать&nbsp;замерщика</button>
+      <button  class="header__call-btn-mb" data-open-modal>
         <img src="./app/img/phone.svg" alt="Вызвать замерщика">
       </button>
     </div>
   </header>
   <main>
-    <section class="hero">
+    <section class="hero" id="section-hero">
       <div class="hero__bg"></div>
 
       <div class="hero__container">
@@ -60,7 +60,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="section-about">
       <div class="about__container">
         <div class=" about__photo about__item"><img src="./app/img/ivan-photo.jpg" alt="Иван Руденко"></div>
         <div class="about__name-spec about__item">
@@ -100,7 +100,7 @@
       </div>
     </section>
 
-    <section class="works">
+    <section class="works" id="section-works">
       <div class="works__container">
         <h2 class="usual-header usual-header--another">Портфолио</h2>
         <div class="works__swiper swiper">
@@ -287,7 +287,128 @@
         <div class="quiz__swiper swiper">
           <ul class="quiz__swiper-wrapper swiper-wrapper">
 
+            <li class="quiz__swiper-slide swiper-slide q-slide">
+              <div class="q-slide__top">
+                <div class="q-slide__top-usual-text">Получите смету и консультацию дизайнера ответив на 5 вопросов:
+                </div>
+              </div>
+              <div class="q-slide__content">
+                <form class="q-slide__form">
+                  <div class="q-slide__form-item hover-quiz">
 
+                    <input value="Без отделки" type="radio" name="slide-1" id="first-1">
+                    <label for="first-1"><img src="./app/img/slide1-2.png" alt="Без отделки"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">Без отделки</p>
+                      <p class="q-slide__text">Нет штукатурки стен
+                        и стяжки пола</p>
+                    </div>
+                  </div>
+                  <div class="q-slide__form-item hover-quiz">
+
+                    <input value="Предчистовая отделка" type="radio" name="slide-1" id="first-2">
+                    <label for="first-2"><img src="./app/img/slide1-2.png" alt="Без отделки"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">Предчистовая отделка</p>
+                      <p class="q-slide__text">Стены оштукатурены, сделана стяжка пола</p>
+                    </div>
+                  </div>
+                  <div class="q-slide__form-item hover-quiz">
+
+                    <input value="Старая отделка" type="radio" name="slide-1" id="first-3">
+                    <label for="first-3"><img src="./app/img/slide1-2.png" alt="Без отделки"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">Старая отделка</p>
+                      <p class="q-slide__text">Есть ремонт, который нужно переделать</p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="q-slide__question">
+                В каком состоянии ваша квартира?
+              </div>
+            </li>
+
+            <li class="quiz__swiper-slide swiper-slide q-slide">
+              <div class="q-slide__top">
+                <div class="q-slide__top-usual-text">Получите смету и консультацию дизайнера ответив на 5 вопросов:
+                </div>
+              </div>
+              <div class="q-slide__content">
+                <form class="q-slide__form">
+                  <div class="q-slide__form-item">
+
+                    <input value="Студия" type="radio" name="slide-2" id="second-1">
+                    <label for="second-1"><img src="./app/img/quiz-2.1.svg" alt="Студия"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">Студия</p>
+                      <p class="q-slide__text">Небольшая квартира без внутренних перегородок</p>
+                    </div>
+                  </div>
+                  <div class="q-slide__form-item">
+
+                    <input value="Однокомнатная квартира" type="radio" name="slide-2" id="second-2">
+                    <label for="second-2"><img src="./app/img/quiz-2.2.svg" alt="Однокомнатная квартира"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">1</p>
+                      <p class="q-slide__text">Однокомнатная квартира</p>
+                    </div>
+                  </div>
+                  <div class="q-slide__form-item">
+
+                    <input value="Двухкомнатная квартира" type="radio" name="slide-2" id="second-3">
+                    <label for="second-3"><img src="./app/img/quiz-2.3.svg" alt="Двухкомнатная квартира"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">2</p>
+                      <p class="q-slide__text">Двухкомнатная квартира</p>
+                    </div>
+                  </div>
+
+                  <div class="q-slide__form-item">
+
+                    <input value="Квартира с тремя комнатами и более" type="radio" name="slide-2" id="second-4">
+                    <label for="second-4"><img src="./app/img/quiz-2.4.svg" alt="Квартира с тремя комнатами и более"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">3+</p>
+                      <p class="q-slide__text">Квартира с тремя комнатами и более</p>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+              <div class="q-slide__question">
+                Какое количество комнат в Вашей квартире?
+              </div>
+            </li>
+            <li class="quiz__swiper-slide swiper-slide q-slide">
+              <div class="q-slide__top">
+                <div class="q-slide__top-usual-text">Получите смету и консультацию дизайнера ответив на 5 вопросов:
+                </div>
+              </div>
+              <div class="q-slide__content">
+                <form class="q-slide__form">
+                  <div class="q-slide__form-item hover-quiz">
+
+                    <input value="Уже есть" type="radio" name="slide-3" id="third-1">
+                    <label for="third-1"><img src="./app/img/slide1-2.png" alt="Без отделки"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">Уже есть</p>
+                    </div>
+                  </div>
+                  <div class="q-slide__form-item hover-quiz">
+
+                    <input value="Пока нет" type="radio" name="slide-3" id="third-2">
+                    <label for="third-2"><img src="./app/img/slide1-2.png" alt="Без отделки"></label>
+                    <div class="quiz__content-text">
+                      <p class="q-slide__title">Пока нет</p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="q-slide__question">
+                У вас есть дизайн проект?
+              </div>
+            </li>
 
             <li class="quiz__swiper-slide swiper-slide q-slide">
               <div class="q-slide__top">
@@ -341,16 +462,21 @@
                   </div>
                   <div class="q-slide__congrat-txt">
                     <p>ПОЗДРАВЛЯЕМ!</p>
-                    <p>Вы успешно ответили на все вопросы и получаете в подарок бесплатную смету и консультацию дизайнера</p>
+                    <p>Вы успешно ответили на все вопросы и получаете в подарок бесплатную смету и консультацию
+                      дизайнера</p>
                   </div>
                 </div>
                 <div class="q-slide__send-form">
                   <div class="q-slide__give-tel-txt">Оставьте ваш номер телефона для рассчета сметы</div>
                   <form method="post" class="q-slide__inp" id="quizForm">
                     <label class="usual-label" for="quiz-phone">Введите ваш номер телефона</label>
-                    <input class="usual-inp" type="tel" id="quiz-phone" name="phone" pattern="[+]{1}[0-9]{11,14}" required placeholder="+7 (999) 123-45-67">
+                    <input class="usual-inp" type="tel" id="quiz-phone" name="phone"
+                           pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{4}" required
+                           placeholder="+7 (___) ___-____" data-slots="_">
                   </form>
-                  <button form="quizForm" type="submit" class="usual-btn usual-btn--send-quiz">Получить бесплатную смету</button>
+                  <button form="quizForm" type="submit" class="usual-btn usual-btn--send-quiz">Получить бесплатную
+                    смету
+                  </button>
                 </div>
                 <div class="q-slide__after-quiz quiz-hidden">
                   <p>Спасибо!</p>
@@ -371,7 +497,7 @@
       </div>
     </section>
 
-    <section class="servs">
+    <section class="servs" id="section-servs">
       <div class="servs__container">
         <h2 class="usual-header usual-header--serv">Наши услуги по ремонту</h2>
         <div class="servs__swiper swiper">
@@ -409,7 +535,7 @@
     </section>
 
 
-    <section class="loyal">
+    <section class="loyal" id="section-loyal">
       <div class="loyal__container">
         <div class="loyal__head-block">
           <h2 class="usual-header">Программа&nbsp;лояльности</h2>
@@ -439,7 +565,7 @@
     </section>
 
 
-    <section class="team">
+    <section class="team" id="section-team">
       <div class="team__bg">
 
       </div>
@@ -511,7 +637,7 @@
     </section>
 
 
-    <section class="reviews">
+    <section class="reviews" id="section-reviews">
       <div class="reviews__bg"></div>
       <div class="reviews__container">
         <div class="reviews__up">
@@ -612,7 +738,7 @@
       </div>
     </section>
 
-    <section class="price">
+    <section class="price" id="section-price">
       <div class="price__bg">
         <img src="./app/img/price-bg.png" alt="">
       </div>
@@ -652,7 +778,7 @@
               </div>
             </li>
           </ul>
-          <button class="usual-btn price__btn-pc">Отправить отзыв</button>
+          <button class="usual-btn price__btn-pc" data-open-modal>Вызвать замерщика</button>
         </div>
       </div>
     </section>
@@ -667,7 +793,7 @@
             <div class="footer__logo">
               <a href="/"><img src="./app/img/footer-logo.png" alt="Логотип"></a>
             </div>
-            <button class="usual-btn">Вызвать замерщика</button>
+            <button class="usual-btn" data-open-modal>Вызвать замерщика</button>
           </li>
           <li class="footer__item">
             <h3 class="footer__header">Контакты</h3>
@@ -707,6 +833,30 @@
       </div>
     </footer>
   </main>
+
+  <aside class="modal ">
+    <div class="modal__content">
+      <h3 class="modal__header">Оставьте ваш номер телефона </h3>
+      <div class="modal__subtext">Оставьте ваш номер телефона для рассчета сметы</div>
+      <form method="post" class="modal__form" id="modalForm">
+        <label class="usual-label" for="modal-name">Ваше имя</label>
+        <input class="usual-inp" type="tel" id="modal-name" name="phone" required
+               placeholder="Имя">
+
+        <label class="usual-label" for="modal-phone">Ваш номер телефона</label>
+        <input class="usual-inp" type="tel" id="modal-phone" name="phone"
+               pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{4}" required
+               placeholder="+7 (___) ___-____" data-slots="_">
+
+
+      </form>
+      <button form="modalForm" type="submit" class="usual-btn usual-btn--send-modal">Получить бесплатную
+        смету
+      </button>
+
+      <button type="button" class="modal__close-btn"></button>
+    </div>
+  </aside>
 
 
 </div>
