@@ -136,6 +136,10 @@
   }
 }
 
+.modal-display-none {
+  display: none;
+}
+
 .modal-hidden {
   transition: all $tr-time ease;
   visibility: hidden;
@@ -144,7 +148,15 @@
 }
 
 .modal__sussess-txt {
-
-
+  padding: 50px 20px;
+  background: #F9F9F9;
+  max-width: 300px;
+  font-family: $ff1;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  color: $dark1;
+z-index: 10;
 
 }

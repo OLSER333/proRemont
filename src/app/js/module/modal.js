@@ -1,3 +1,6 @@
+import './createEl';
+import createEl from "./createEl";
+
 export default function () {
 
 
@@ -10,7 +13,7 @@ export default function () {
 
   modalWindow.addEventListener('click', (e) => {
     if(e.target.classList.contains('modal')) {
-      modalWindow.classList.remove('modal-hidden')
+      modalWindow.classList.add('modal-hidden')
     }
   })
 
@@ -24,8 +27,10 @@ export default function () {
 
   modalForm.addEventListener('submit', e => {
     e.preventDefault()
-    console.log('formSended', e)
     const modalData = [e.target.children[1].value, e.target.children[3].value]
+
+
+
 
     // !! ДАННЫЕ ИЗ МОДАЛКИ!!!!!!!!!
     console.log('ДАННЫЕ ИЗ МОДАЛКИ', modalData)
@@ -33,16 +38,23 @@ export default function () {
 
     //!!! Текст сообщения об отправке данных
     const txtSuccess = 'Спасибо! Мы вам перезвоним!'
+    //!!! Текст сообщения об отправке данных
 
 
-    document.querySelector('.usual-btn--send-modal').classList.add('modal-hidden')
-    document.createElement('p', {textContent: txtSuccess, className: 'modal__sussess-txt'})
+
+
+   sendModalBtn.classList.add('modal-display-none')
+    const sussessPopup = createEl('p', {textContent: txtSuccess, className: 'modal__sussess-txt'})
+    modalForm.after(sussessPopup)
     setTimeout(() => {
-
-
       modalWindow.classList.add('modal-hidden')
-      document.querySelector('.usual-btn--send-modal').classList.remove('modal-hidden')
-    }, 3000)
+      setTimeout(() => {
+        sussessPopup.remove()
+        sendModalBtn.classList.remove('modal-display-none')
+        e.target.children[1].value = '';
+        e.target.children[3].value = '';
+      }, 300)
+    }, 4000)
 
   })
 
