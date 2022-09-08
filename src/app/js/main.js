@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 0,
     loop: false,
     allowTouchMove: false,
-
+    autoHeight: true,
 
     pagination: {
       el: '.quiz__pagination',

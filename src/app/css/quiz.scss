@@ -114,6 +114,7 @@
 
   input {
     appearance: none;
+    display: none;
   }
 
   position: relative;
@@ -154,11 +155,13 @@
       height: 175px;
 
       margin: 0;
+      flex-basis: 40%;
+
     }
 
     @media (max-width: 450px) {
-      min-width: 100px;
-      height: auto;
+      min-width: 140px;
+      //height: auto;
     }
 
 
@@ -395,15 +398,104 @@
 //==last-quiz========================================================
 
 .q-slide__last-content {
+  display: flex;
+  align-items: center;
+  @media (max-width:$quiz-to-mb) {
+    flex-direction: column;
+    gap: 50px;
+    padding: 0 20px;
+  }
 }
 
 .q-slide__congrat {
+  position: relative;
+  border-right: 2px solid $light1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width:$quiz-to-mb) {
+        //min-height: 456px;
+    border: none;
+    margin-top: 50px;
+  }
+}
+
+.q-slide__img {
+  flex: 0 0 50%;
+  height: 100%;
+  position: relative;
+
+  img {
+    left: 0;
+    top: 0;
+    //max-width: 100%;
+    //max-height: 100%;
+    //width: 100%;
+    //height: 100%;
+    object-fit: cover;
+    @media (max-width:$quiz-to-mb) {
+      width: 400px;
+
+    }
+    @media (max-width:400px) {
+      width: 100vw;
+    }
+  }
 }
 
 .q-slide__congrat-txt {
+  position: absolute;
+  top: 25%;
+  left: calc(50% - 200px) ;
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  //max-height: 346px;
+
+  @media (max-width:$quiz-to-mb) {
+    top: 15%;
+    padding: 40px
+  }
+  @media (max-width:400px) {
+    left: 0;
+    top: 0;
+    padding: 10px;
+  }
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(30px);
+  p:nth-child(1) {
+    text-align: center;
+    font-family: $ff2;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 44px;
+    text-transform: uppercase;
+    color: $dark1;
+  }
+  p:nth-child(2) {
+
+    font-family: $ff1;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 38px;
+    text-align: center;
+    color: $dark1;
+  }
+
+}
+
+.q-slide__send-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  width: 100%;
 }
 
 .q-slide__give-tel-txt {
+  max-width: 500px;
   font-family: $ff1;
   font-weight: 800;
   font-size: 24px;
@@ -413,22 +505,61 @@
 }
 
 .q-slide__inp {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
 }
 
 .usual-label {
+  margin-left: 10px;
   font-family: $ff1;
   font-weight: 600;
   font-size: 16px;
   line-height: 33px;
   color: $light1;
+  text-align: left;
 }
 
 .usual-inp {
+  font-family: $ff1;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 33px;
+  color: $light4;
+
+  width: 100%;
+  max-width: 340px;
+  padding: 15px;
+  &::placeholder {
+    font-family: $ff1;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 33px;
+    color: $light4;
+  }
 }
 
 .usual-btn {
 }
 
 .usual-btn--send-quiz {
+  max-width: 240px;
 }
 
+.q-slide__after-quiz {
+  max-width: 500px;
+  font-family: $ff1;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  color: #FFFBF4;
+}
+
+.quiz-hidden {
+  display: none;
+}

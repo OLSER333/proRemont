@@ -69,4 +69,27 @@ export default function () {
   prevBtn.addEventListener('click', () => {
     qState.curPos--;
   })
+
+
+
+
+
+
+
+
+
+  document.querySelector('.q-slide__inp').addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    qState.dataToMail.push(document.querySelector('#quiz-phone').value)
+
+      //! !!!  ЭТО НА ПОЧТУУУУУУУУУУУУУУ
+    console.log('То что должно отправляться на почту', qState.dataToMail)
+
+    document.querySelector('.q-slide__after-quiz').classList.remove('quiz-hidden')
+    document.querySelector('.q-slide__send-form').classList.add('quiz-hidden')
+
+
+  })
+
 }
