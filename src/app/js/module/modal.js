@@ -11,6 +11,7 @@ export default function () {
   const modalWindow = document.querySelector('.modal')
 
 
+
   modalWindow.addEventListener('click', (e) => {
     if(e.target.classList.contains('modal')) {
       modalWindow.classList.add('modal-hidden')
@@ -60,7 +61,6 @@ export default function () {
 
 
   const modalBtns = document.querySelectorAll('[data-open-modal]')
-  console.log('123', modalBtns)
   modalBtns.forEach(el => {
     el.addEventListener('click', () => {
       modalWindow.classList.remove('modal-hidden')
