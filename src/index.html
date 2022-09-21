@@ -25,7 +25,7 @@
         </ul>
       </nav>
       <button class="usual-btn" data-open-modal>Вызвать&nbsp;замерщика</button>
-      <button  class="header__call-btn-mb" data-open-modal>
+      <button class="header__call-btn-mb" data-open-modal>
         <img src="./app/img/phone.svg" alt="Вызвать замерщика">
       </button>
     </div>
@@ -59,7 +59,7 @@
 
     <section class="about" id="section-about">
       <div class="about__container">
-        <div class=" about__photo about__item"><img src="./app/img/ivan-photo.jpg" alt="Иван Руденко"></div>
+        <div class=" about__photo about__item"><img src="./app/img/ivan-photo-2.jpg" alt="Иван Руденко"></div>
         <div class="about__name-spec about__item">
           <p>Иван Руденко</p>
           <p>Специалист по отделке квартир в Новороссийске</p>
@@ -364,7 +364,8 @@
                   <div class="q-slide__form-item">
 
                     <input value="Квартира с тремя комнатами и более" type="radio" name="slide-2" id="second-4">
-                    <label for="second-4"><img src="./app/img/quiz-2.4.svg" alt="Квартира с тремя комнатами и более"></label>
+                    <label for="second-4"><img src="./app/img/quiz-2.4.svg"
+                                               alt="Квартира с тремя комнатами и более"></label>
                     <div class="quiz__content-text">
                       <p class="q-slide__title">3+</p>
                       <p class="q-slide__text">Квартира с тремя комнатами и более</p>
@@ -742,44 +743,84 @@
       <div class="price__container">
         <div class="price__inner">
 
-          <div class="usual-header usual-header--price">Стоимость</div>
+          <div class="usual-header usual-header--price">Стоимость ремонта</div>
           <ul class="price__list">
             <li class="price__item">
-              <div class="price__info-top">
-                <div class="price__title">Стандартный ремонт</div>
-                <div class="price__dots"></div>
-                <div class="price__item-price">от 5000₽</div>
+              <div class="price__icon">
+                <img src="./app/img/price-icon1.svg" alt="цена ремонта">
+                <img class="price__icon-i" src="./app/img/icon-info.svg" alt="инфо">
               </div>
-              <div class="price__info-bottom">
-                <p>Описание отличий этого ремонта, нужно получить от заказчика текст</p>
-              </div>
+              <div class="price__title">Под аренду</div>
+              <div class="price__item-price">от 5000₽</div>
             </li>
             <li class="price__item">
-              <div class="price__info-top">
-                <div class="price__title">Ремонт бизнес-класса</div>
-                <div class="price__dots"></div>
-                <div class="price__item-price">от 9000₽</div>
+              <div class="price__icon">
+                <img src="./app/img/price-icon2.svg" alt="цена ремонта">
+                <img class="price__icon-i" src="./app/img/icon-info.svg" alt="инфо">
               </div>
-              <div class="price__info-bottom">
-                <p>Описание отличий этого ремонта, нужно получить от заказчика текст</p>
-              </div>
+              <div class="price__title">Косметический</div>
+              <div class="price__item-price">от 7500₽</div>
+
             </li>
             <li class="price__item">
-              <div class="price__info-top">
-                <div class="price__title">Ремонт премиум-класса</div>
-                <div class="price__dots"></div>
-                <div class="price__item-price">от 13000₽</div>
+              <div class="price__icon">
+                <img src="./app/img/price-icon3.svg" alt="цена ремонта">
+                <img class="price__icon-i" src="./app/img/icon-info.svg" alt="инфо">
               </div>
-              <div class="price__info-bottom">
-                <p>Описание отличий этого ремонта, нужно получить от заказчика текст</p>
+              <div class="price__title">Капитальный</div>
+              <div class="price__item-price">от 9500₽</div>
+            </li>
+            <li class="price__item">
+              <div class="price__icon">
+                <img src="./app/img/price-icon4.svg" alt="цена ремонта">
+                <img class="price__icon-i" src="./app/img/icon-info.svg" alt="инфо">
               </div>
+              <div class="price__title">Премиум</div>
+              <div class="price__item-price">от 13000₽</div>
             </li>
           </ul>
-          <button class="usual-btn price__btn-pc" data-open-modal>Вызвать замерщика</button>
+          <button class="usual-btn" data-open-modal>Вызвать замерщика</button>
         </div>
       </div>
     </section>
-    <!--    <div style="height: 500px;"></div>-->
+
+
+    <section class="types-serv" id="section-types-serv">
+      <div class="types-serv__container">
+        <h2 class="usual-header">Виды услуг</h2>
+        <ul class="types-serv__list">
+          <li class="types-serv__item">
+            <img src="./app/img/tiles.svg" alt="Плиточные работы">
+            <h3 class="types-serv__header">Плиточные работы</h3>
+          </li>
+          <li class="types-serv__item">
+            <img src="./app/img/plan.svg" alt="Электромонтажные работы">
+            <h3 class="types-serv__header">Электромонтажные работы</h3>
+          </li>
+          <li class="types-serv__item">
+            <img src="./app/img/pipe.svg" alt="Сантехнические работы">
+            <h3 class="types-serv__header">Сантехнические работы</h3>
+          </li>
+          <li class="types-serv__item">
+            <img src="./app/img/double-door-2.svg" alt="Дополнительные услуги">
+            <h3 class="types-serv__header">Дополнительные услуги</h3>
+          </li>
+          <li class="types-serv__item">
+            <img src="./app/img/jackhammer.svg" alt="Демонтажные работы">
+            <h3 class="types-serv__header">Демонтажные работы</h3>
+          </li>
+          <li class="types-serv__item">
+            <img src="./app/img/painting%201.svg" alt="Малярные работы">
+            <h3 class="types-serv__header">Малярные работы</h3>
+          </li>
+          <li class="types-serv__item">
+            <img src="./app/img/plastering.svg" alt="Черновые работы">
+            <h3 class="types-serv__header">Черновые работы</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="footer__bg">
 

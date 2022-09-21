@@ -1,30 +1,22 @@
 /*
 Установка:
 npm install
-
-
 Для разработки:
  1. ставим в файле .env переменную APP_ENV=dev
  2. даем команду npm run start
  http://localhost:3000/
  Получаем комфортную среду для отладки (есть карты кода (source maps))
-
-
  Для продакшена:
  1. ставим в файле .env переменную APP_ENV=prod
  2. даем команду npm run build
-
 Так же в файле .env  есть глобальные переменные, которые можно использовать для запуска определенного кода в development,
 если нужны еще переменные, то дописываем их в секцию plugins:webpack.DefinePlugin
 Если нужны еще точки входа (кроме index.html и abiut.html), то вписываем их в plugin:
     new HtmlWebPackPlugin(....)
-
  Для теста:
     npm run test
-
 Для проверки правильности кода:
     npm run lint
-
 */
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
@@ -65,14 +57,14 @@ const config = {
   devtool: setDevTool(),
   module: {
     rules: [{
-        test: /\.html$/,
-        use: [{
-          loader: 'html-loader',
-          options: {
-            minimize: false
-          }
-        }]
-      },
+      test: /\.html$/,
+      use: [{
+        loader: 'html-loader',
+        options: {
+          minimize: false
+        }
+      }]
+    },
       {
         test: /\.js$/,
         use: 'babel-loader',
@@ -156,7 +148,7 @@ const config = {
       filename: './index.html',
       favicon: "./src/favicon.ico"
     }),
-      new webpack.DefinePlugin({
+    new webpack.DefinePlugin({
       API_KEY: JSON.stringify(process.env.API_KEY),
       APP_ENV: JSON.stringify(process.env.APP_ENV)
     })
@@ -165,7 +157,7 @@ const config = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 5000,
+    port: 3000,
     stats: 'errors-only',
     clientLogLevel: 'none'
   }
