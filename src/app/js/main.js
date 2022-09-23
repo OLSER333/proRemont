@@ -1,7 +1,8 @@
 import '../css/style.scss'
 
-import Swiper, {Navigation, Pagination} from "swiper";
+import Swiper, {Navigation, Pagination, Thumbs} from "swiper";
 import '../../../node_modules/swiper/swiper-bundle.css';
+// import '../../../node_modules/swiper/swiper-bundle.js';
 
 
 import burger from "./module/burger";
@@ -12,7 +13,6 @@ import initSliders from "./module/swipers";
 import maskPhone from "./module/maskPhone";
 import smoothAnchors from "./module/smooth-anchors";
 import modal from "./module/modal";
-
 
 // import v from "./module/v";
 
@@ -148,6 +148,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   })
+
+
+
+
+
+
+
+    const innerSwiper = new Swiper(".swiper-thumbs-list", {
+      watchSlidesProgress: true,
+      allowTouchMove: false,
+    });
+    const innerSwiperThumbs = new Swiper(".swiper-for-thumbs", {
+      modules: [Thumbs],
+      allowTouchMove: false,
+      thumbs: {
+        swiper: innerSwiper,
+      },
+    });
+
+
+
 
 
 })
