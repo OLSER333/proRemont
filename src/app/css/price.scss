@@ -2,7 +2,9 @@
 .price {
   position: relative;
   display: flex;
-  flex-direction: column;
+  @media (max-width:$mobile) {
+    
+  }
 
 }
 
@@ -11,7 +13,11 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  @media (max-width:1440px) {
+  @media (min-width:$maxW) {
+    position: relative;
+  }
+
+  @media (max-width:$maxW) {
     left: -30%;
   }
 
@@ -20,9 +26,9 @@
     width: 100%;
     height: 100%;
 
-    @media (min-width: 1440px) {
+    @media (min-width: $maxW) {
     }
-    @media (max-width: 1440px) {
+    @media (max-width: $maxW) {
       width: 80%;
       object-position: 0 100%;
 
@@ -55,8 +61,10 @@
 .price__container {
   padding: 0;
   display: flex;
+  @media (max-width:$maxW) {
   justify-content: flex-end;
 
+  }
   @media (max-width: $price-to-mb) {
     justify-content: center;
   }
@@ -70,6 +78,7 @@
   gap: 60px;
   max-width: 855px;
   background: $main-bg-color;
+
   @media (max-width:$price-to-mb) {
     width: 100vw;
     gap: 30px;
