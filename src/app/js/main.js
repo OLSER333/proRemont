@@ -149,26 +149,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   })
 
+// внутренние swipers
+  const innerSwipersNodes = document.querySelectorAll('.swiper-thumbs-list')
+  const thumbsSwipersNodes = document.querySelectorAll('.swiper-for-thumbs')
 
-
-
-
-
-
-    const innerSwiper = new Swiper(".swiper-thumbs-list", {
+  const innerSwipers = []
+  innerSwipersNodes.forEach((e, idx) => {
+    innerSwipers.push(new Swiper(e, {
       watchSlidesProgress: true,
       allowTouchMove: false,
-    });
-    const innerSwiperThumbs = new Swiper(".swiper-for-thumbs", {
+    }))
+  })
+  const thumbsSwipers = []
+  thumbsSwipersNodes.forEach((e, idx) => {
+    thumbsSwipers.push(new Swiper(e, {
       modules: [Thumbs],
       allowTouchMove: false,
       thumbs: {
-        swiper: innerSwiper,
-      },
-    });
-
-
-
+        swiper: innerSwipers[idx],
+      }
+    }));
+  })
 
 
 })
