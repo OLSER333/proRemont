@@ -81,10 +81,10 @@ address {
 //  width: 5px;
 //}
 
-body {
+* {
   &::-webkit-scrollbar{
     width: 1px;
-
+    height: 0px;
   }
 
 

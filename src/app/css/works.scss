@@ -180,6 +180,7 @@
   width: 60px;
   height: 60px;
 
+  opacity: 0;
   font-family: $ff2;
   font-weight: 700;
   font-size: 20px;
@@ -289,7 +290,10 @@
   color: $dark2;
 }
 
-
+.swiper-slide-active .works__slide-square {
+  transition: all $tr-time ease;
+  opacity: 1;
+}
 
 
 
