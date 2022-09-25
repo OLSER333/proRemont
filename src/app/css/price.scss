@@ -15,8 +15,10 @@
 .price__bg {
   //position: absolute;
   width: 100%;
+  max-height: 860px;
   //height: 100%;
   z-index: -1;
+
   @media (min-width: $maxW) {
     position: relative;
   }
@@ -115,19 +117,21 @@
   }
 
   &:hover {
-    &:nth-child(even) {
-      .price__item-hover {
-        left: unset;
-        right: 5px;
-      }
-    }
+   @media (max-width:$price-to-mb) {
+     &:nth-child(even) {
+       .price__item-hover {
+         left: unset;
+         right: 5px;
+       }
+     }
 
-    &:nth-child(odd) {
-      .price__item-hover {
-        left: 5px;
-        right: unset;
-      }
-    }
+     &:nth-child(odd) {
+       .price__item-hover {
+         left: 5px;
+         right: unset;
+       }
+     }
+   }
 
     .price__item-non-hover {
       display: none;

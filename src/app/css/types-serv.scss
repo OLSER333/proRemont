@@ -17,14 +17,14 @@
 
   @media (min-width: $types-serv-to-mb) {
     border: 1px solid #BBBBBB;
-    grid-template-rows: 230px 230px;
-    //grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, minmax(230px, 1fr));
+    grid-template-columns: repeat(4, minmax(210px, 1fr));
     grid-template-areas:
      'a b c d'
      'e f g d';
   }
   @media (max-width: $types-serv-to-mb) {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(210px, 1fr);
     justify-items: center;
     grid-template-rows: unset;
 
@@ -88,6 +88,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      gap: 10px;
       text-align: left;
     }
   }
@@ -116,7 +117,7 @@
   font-family: $ff2;
   font-weight: 300;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 1.2;
 
 
 }

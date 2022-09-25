@@ -14,6 +14,7 @@ export default function () {
 
   modalWindow.addEventListener('click', (e) => {
     if(e.target.classList.contains('modal')) {
+      document.body.classList.remove('lock')
       modalWindow.classList.add('modal-hidden')
     }
   })
@@ -21,6 +22,7 @@ export default function () {
 
 
   closeModalBtn.addEventListener('click', () => {
+    document.body.classList.toggle('lock')
     modalWindow.classList.add('modal-hidden')
   })
 
@@ -54,6 +56,7 @@ export default function () {
         sendModalBtn.classList.remove('modal-display-none')
         e.target.children[1].value = '';
         e.target.children[3].value = '';
+        document.body.classList.remove('lock')
       }, 300)
     }, 4000)
 
@@ -64,6 +67,7 @@ export default function () {
   modalBtns.forEach(el => {
     el.addEventListener('click', () => {
       modalWindow.classList.remove('modal-hidden')
+      document.body.classList.toggle('lock')
     })
   })
 }
