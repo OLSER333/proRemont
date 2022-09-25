@@ -33,14 +33,17 @@
   transition: all $tr-time ease;
 
   @media (min-width:800px) {
-    filter: blur(1px) brightness(70%);
+    -webkit-backdrop-filter: blur(1px) brightness(70%);
+    backdrop-filter: blur(1px) brightness(70%);
 
   &:hover {
 
     .servs__call-to-action {
       height: 20%;
     }
-    filter: blur(0px) brightness(90%);
+    -webkit-backdrop-filter: blur(0px) brightness(90%);
+    backdrop-filter: blur(0px) brightness(90%);
+
     }
   }
 
@@ -56,6 +59,7 @@
     object-fit: cover;
     @media (max-width:600px) {
       height: 430px;
+      -webkit-filter: brightness(80%);
       filter: brightness(80%);
     }
   }

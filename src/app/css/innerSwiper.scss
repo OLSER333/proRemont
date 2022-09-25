@@ -116,6 +116,7 @@ html,
 .swiper-thumbs-list .swiper-slide {
   width: 60px !important;
   height: 60px !important;
+  -webkit-filter: brightness(75%);
   filter: brightness(75%);
   border: 2px solid #F9F9F9;
   border-radius: 5px;
@@ -124,7 +125,8 @@ html,
 }
 
 .swiper-thumbs-list .swiper-slide-thumb-active {
-  filter: brightness(100%)
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%);
 }
 
 //.swiper-slide.swiper-slide-thumbs img {
