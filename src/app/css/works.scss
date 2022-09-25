@@ -291,6 +291,8 @@
 }
 
 .swiper-slide-active .works__slide-square {
+  top: 115px;
+  right: 15px;
   transition: all $tr-time ease;
   opacity: 1;
 }

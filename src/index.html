@@ -149,8 +149,6 @@
                       </div>
 
 
-
-
                     </div>
                   </div>
                 </div>
@@ -580,7 +578,8 @@
                            tabindex="-1"
                     >
                   </form>
-                  <button tabindex="-1" form="quizForm" type="submit" class="usual-btn usual-btn--send-quiz">Получить бесплатную
+                  <button tabindex="-1" form="quizForm" type="submit" class="usual-btn usual-btn--send-quiz">Получить
+                    бесплатную
                     смету
                   </button>
                 </div>
@@ -854,37 +853,86 @@
           <div class="usual-header usual-header--price">Стоимость ремонта</div>
           <ul class="price__list">
             <li class="price__item">
-              <div class="price__icon">
-                <img src="./app/img/price-icon1.svg" alt="цена ремонта">
-                <img class="price__icon-i" src="./app/img/icon-info.svg" alt="инфо">
+              <div class="price__item-non-hover">
+                <div class="price__icon">
+                  <img src="./app/img/price-icon1.svg" alt="цена ремонта">
+                  <img class="price__icon-i" src="./app/img/icon-info.svg" alt="инфо">
+                </div>
+                <div class="price__title">Под аренду</div>
+                <div class="price__item-price">от 5000₽</div>
               </div>
-              <div class="price__title">Под аренду</div>
-              <div class="price__item-price">от 5000₽</div>
+              <div class="price__item-hover">
+               <p>Шпаклевание стен без выравнивания</p>
+               <p>Поклейка обоев</p>
+               <p>Укладка напольного покрытия (ламинат, линолеум)</p>
+               <p>Укладка керамической плитки в санузле</p>
+               <p>Разводка сантехнических труб</p>
+               <p>Установка сантехники</p>
+              </div>
             </li>
             <li class="price__item">
+              <div class="price__item-non-hover">
               <div class="price__icon">
                 <img src="./app/img/price-icon2.svg" alt="цена ремонта">
                 <img class="price__icon-i" src="./app/img/icon-info.svg" alt="инфо">
               </div>
               <div class="price__title">Косметический</div>
               <div class="price__item-price">от 7500₽</div>
-
+              </div>
+              <div class="price__item-hover">
+                <p>Шпаклевание стен без выравнивания</p>
+                <p>Поклейка обоев</p>
+                <p>или покраска</p>
+                <p>Укладка напольного покрытия (ламинат, линолеум, паркетной доски)</p>
+                <p>Укладка керамической плитки или керамогранита</p>
+                <p>в санузле</p>
+                <p>Разводка сантехнических труб</p>
+                <p>Установка сантехники</p>
+                <p>Электромонтажные работы</p>
+                <p>Монтаж межкомнатных дверей</p>
+                <p>Установка обычного плинтуса</p>
+                <p>Установка освещения</p>
+              </div>
             </li>
             <li class="price__item">
+              <div class="price__item-non-hover">
               <div class="price__icon">
                 <img src="./app/img/price-icon3.svg" alt="цена ремонта">
                 <img class="price__icon-i" src="./app/img/icon-info.svg" alt="инфо">
               </div>
               <div class="price__title">Капитальный</div>
               <div class="price__item-price">от 9500₽</div>
+              </div>
+              <div class="price__item-hover">
+                <p>Работы по "Косметический ремонт" +</p>
+                <p>Выравнивание стен</p>
+                <p>и пола</p>
+                <p>Потолки из ГКЛ</p>
+                <p>Монтаж декоративных элементов</p>
+                <p>Укладка плитки в коридоре и кухне</p>
+                <p>Изготовление перегородок</p>
+                <p>Замена электропроводки</p>
+                <p>Расстил теплого пола</p>
+                <p>Установка люка скрытого монтажа</p>
+              </div>
             </li>
             <li class="price__item">
+              <div class="price__item-non-hover">
               <div class="price__icon">
                 <img src="./app/img/price-icon4.svg" alt="цена ремонта">
                 <img class="price__icon-i" src="./app/img/icon-info.svg" alt="инфо">
               </div>
               <div class="price__title">Премиум</div>
               <div class="price__item-price">от 13000₽</div>
+              </div>
+              <div class="price__item-hover">
+               <p>Работы по "Капитальный ремонт" +</p>
+               <p>Покраска стен</p>
+               <p>Декоративная штукатурка под мрамор, шелк и тд</p>
+               <p>Работа с плиткой XXL формата</p>
+               <p>Установка МДФ плинтуса</p>
+               <p>Установка скрытых межкомнатных дверей</p>
+              </div>
             </li>
           </ul>
           <button class="usual-btn" data-open-modal>Вызвать замерщика</button>
@@ -898,8 +946,10 @@
         <h2 class="usual-header">Виды услуг</h2>
         <ul class="types-serv__list">
           <li class="types-serv__item">
-            <img src="./app/img/tiles.svg" alt="Плиточные работы">
-            <h3 class="types-serv__header">Плиточные работы</h3>
+            <div class="types-serv__item-non-hover">
+              <img src="./app/img/tiles.svg" alt="Плиточные работы">
+              <h3 class="types-serv__header">Плиточные работы</h3>
+            </div>
             <div class="types-serv__item-hover">
               <p>Заусовка плитки</p>
               <p>Подрезка плитки</p>
@@ -910,28 +960,84 @@
             </div>
           </li>
           <li class="types-serv__item">
-            <img src="./app/img/plan.svg" alt="Электромонтажные работы">
-            <h3 class="types-serv__header">Электромонтажные работы</h3>
+            <div class="types-serv__item-non-hover">
+              <img src="./app/img/plan.svg" alt="Электромонтажные работы">
+              <h3 class="types-serv__header">Электромонтажные работы</h3>
+            </div>
+            <div class="types-serv__item-hover">
+              <p>Протяжка кабеля</p>
+              <p>Вырез отверстий</p>
+              <p>Установка и сборка электрощита</p>
+              <p>Установка розеток</p>
+              <p>Проходные выключатели</p>
+            </div>
           </li>
           <li class="types-serv__item">
-            <img src="./app/img/pipe.svg" alt="Сантехнические работы">
-            <h3 class="types-serv__header">Сантехнические работы</h3>
+            <div class="types-serv__item-non-hover">
+              <img src="./app/img/pipe.svg" alt="Сантехнические работы">
+              <h3 class="types-serv__header">Сантехнические работы</h3>
+            </div>
+            <div class="types-serv__item-hover">
+              <p>Разводка сантехники и канализации</p>
+              <p>Установка кранов</p>
+              <p>Установка ванн любого формата</p>
+              <p>Установка стеклянных дверей для душевых кабин</p>
+            </div>
           </li>
           <li class="types-serv__item">
-            <img src="./app/img/double-door-2.svg" alt="Дополнительные услуги">
-            <h3 class="types-serv__header">Дополнительные услуги</h3>
+            <div class="types-serv__item-non-hover">
+              <img src="./app/img/double-door-2.svg" alt="Дополнительные услуги">
+              <h3 class="types-serv__header">Дополнительные услуги</h3>
+            </div>
+            <div class="types-serv__item-hover">
+              <p>Натяжной потолок</p>
+              <p>Прокладка трасс под сплит-системы</p>
+              <p>Установка сплит-систем</p>
+              <p>Установка межкомнатных дверей</p>
+              <p>Установка скрытых межкомнатных дверей</p>
+              <p>Установка входных дверей</p>
+              <p>Установка окон</p>
+              <p>Установка и сборка мебели и кухни</p>
+              <p>Доставка материала</p>
+              <p>Подьем материала</p>
+              <p>Вывоз мусора</p>
+              <p>Вынос мусора</p>
+            </div>
           </li>
           <li class="types-serv__item">
-            <img src="./app/img/jackhammer.svg" alt="Демонтажные работы">
-            <h3 class="types-serv__header">Демонтажные работы</h3>
+            <div class="types-serv__item-non-hover">
+              <img src="./app/img/jackhammer.svg" alt="Демонтажные работы">
+              <h3 class="types-serv__header">Демонтажные работы</h3>
+            </div>
+            <div class="types-serv__item-hover">
+              <p>Вырез проемов под нужный размер</p>
+              <p>Расширение балконных блоков</p>
+              <p>Демонтаж межкомнатных перегородок</p>
+            </div>
           </li>
           <li class="types-serv__item">
-            <img src="./app/img/painting%201.svg" alt="Малярные работы">
-            <h3 class="types-serv__header">Малярные работы</h3>
+            <div class="types-serv__item-non-hover">
+              <img src="./app/img/painting%201.svg" alt="Малярные работы">
+              <h3 class="types-serv__header">Малярные работы</h3>
+            </div>
+            <div class="types-serv__item-hover">
+              <p>Подготовка стен под обои или покраску</p>
+              <p>Подготовка стен под декоративную штукатурку</p>
+              <p>Поклейка обоев</p>
+              <p>Покраска стен</p>
+              <p>Нанесение декоративной штукатурки</p>
+              <p>(мокрый шёлк, мрамор и тд)</p>
+            </div>
           </li>
           <li class="types-serv__item">
-            <img src="./app/img/plastering.svg" alt="Черновые работы">
-            <h3 class="types-serv__header">Черновые работы</h3>
+            <div class="types-serv__item-non-hover">
+              <img src="./app/img/plastering.svg" alt="Черновые работы">
+              <h3 class="types-serv__header">Черновые работы</h3>
+            </div>
+            <div class="types-serv__item-hover">
+             <p>Стяжка пола</p>
+             <p>Оштукатуривание стен</p>
+            </div>
           </li>
         </ul>
       </div>
