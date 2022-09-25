@@ -1,4 +1,0 @@
-avenir:
-  light -> use regular
-  heavy -> use bold
-  
