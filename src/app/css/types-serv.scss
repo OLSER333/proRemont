@@ -37,6 +37,7 @@
 .types-serv__item {
   min-height: 230px;
   border: 1px solid #BBBBBB;
+  cursor: pointer;
 
   @media (min-width: $types-serv-to-mb) {
 

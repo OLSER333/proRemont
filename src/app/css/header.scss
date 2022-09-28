@@ -6,8 +6,11 @@
 
 
   @media (max-width: $toBurger) {
-    position: sticky;
-    top: 0;
+    //position: sticky;
+    //top: 0;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
     &.header--burg-open {
       //position: fixed;
       top: calc(100vh - 60px);
