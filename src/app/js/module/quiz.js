@@ -51,6 +51,9 @@ export default function () {
         }, 0)
       }
     } else if(qState.curPos + 1 === qState.dataToMail.length) {
+      const forDataQuiz = document.querySelector('.for-data-quiz')
+      forDataQuiz.value = qState.dataToMail.join('\n\n')
+      console.log('lsdkjfsldkjf', forDataQuiz.value)
       setTimeout(() => {
         prevBtn.classList.add('quiz-hidden')
         nextBtn.classList.add('quiz-hidden')
@@ -82,10 +85,11 @@ export default function () {
   document.querySelector('.q-slide__inp').addEventListener('submit', (e) => {
     e.preventDefault()
 
-    qState.dataToMail.push(document.querySelector('#quiz-phone').value)
+    // qState.dataToMail.push(document.querySelector('#quiz-phone').value)
 
       //! !!!  ЭТО НА ПОЧТУУУУУУУУУУУУУУ
-    console.log('На почту ', qState.dataToMail)
+    // console.log('На почту ',qState.dataToMail.join('\n\n'))
+
     //! !!!  ЭТО НА ПОЧТУУУУУУУУУУУУУУ
 
 

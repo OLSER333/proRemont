@@ -697,11 +697,12 @@
                   <div class="q-slide__give-tel-txt">Оставьте ваш номер телефона для рассчета сметы</div>
                   <form method="post" class="q-slide__inp" id="quizForm">
                     <label class="usual-label" for="quiz-phone">Введите ваш номер телефона</label>
-                    <input class="usual-inp" type="tel" id="quiz-phone" name="phone"
+                    <input class="usual-inp" type="tel" id="quiz-phone" name="phones"
                            pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{4}" required
                            placeholder="+7 (___) ___-____" data-slots="_"
                            tabindex="-1"
                     >
+                    <textarea class="for-data-quiz"  style="display: none" name="quiz" id=""></textarea>
                   </form>
                   <button tabindex="-1" form="quizForm" type="submit" class="usual-btn usual-btn--send-quiz">Получить
                     бесплатную
@@ -1214,11 +1215,11 @@
       <div class="modal__subtext">Оставьте ваш номер телефона для рассчета сметы</div>
       <form method="post" class="modal__form" id="modalForm">
         <label class="usual-label" for="modal-name">Ваше имя</label>
-        <input class="usual-inp" type="tel" id="modal-name" name="phone" required
+        <input class="usual-inp" type="tel" id="modal-name" name="imya" required
                placeholder="Имя">
 
         <label class="usual-label" for="modal-phone">Ваш номер телефона</label>
-        <input class="usual-inp" type="tel" id="modal-phone" name="phone"
+        <input class="usual-inp" type="tel" id="modal-phone" name="phones"
                pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{4}" required
                placeholder="+7 (___) ___-____" data-slots="_">
 
@@ -1235,5 +1236,46 @@
 
 
 </div>
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('form').submit(function () {
+      // var formID = $(this).attr('id'); // Получение ID формы
+      var formNm = $('#modalForm');
+      $.ajax({
+        type: 'POST',
+        url: 'mail.php', // Обработчик формы отправки
+        data: formNm.serialize(),
+        success: function (data) {
+// Вывод текста результата отправки в текущей форме
+          $(formNm).html(data);
+        }
+      });
+      return false;
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('form').submit(function () {
+      // var formID = $(this).attr('id'); // Получение ID формы
+      var formNm = $('#quizForm');
+      $.ajax({
+        type: 'POST',
+        url: 'mail.php', // Обработчик формы отправки
+        data: formNm.serialize(),
+        success: function (data) {
+// Вывод текста результата отправки в текущей форме
+          $(formNm).html(data);
+        }
+      });
+      return false;
+    });
+  });
+</script>
 </body>
 </html>

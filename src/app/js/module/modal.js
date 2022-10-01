@@ -26,7 +26,18 @@ export default function () {
     modalWindow.classList.add('modal-hidden')
   })
 
-
+  // async function sendDataToPhp(data) {
+  //   let response = await fetch('./mail.php', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json;charset=utf-8'
+  //     },
+  //     body: JSON.stringify(data)
+  //   });
+  //
+  //   let result = await response.json();
+  //   alert(result.message);
+  // }
 
   modalForm.addEventListener('submit', e => {
     e.preventDefault()
@@ -36,8 +47,27 @@ export default function () {
 
 
     // !! ДАННЫЕ ИЗ МОДАЛКИ!!!!!!!!!
-    console.log('ДАННЫЕ ИЗ МОДАЛКИ', modalData)
+    // console.log('ДАННЫЕ ИЗ МОДАЛКИ', modalData)
+
+    // $(document).ready(function () {
+//       $('form').submit(function () {
+//         var formID = $(this).attr('id'); // Получение ID формы
+//         var formNm = $('#' + formID);
+//         $.ajax({
+//           type: 'POST',
+//           url: 'mail.php', // Обработчик формы отправки
+//           data: formNm.serialize(),
+//           success: function (data) {
+// // Вывод текста результата отправки в текущей форме
+//             $(formNm).html(data);
+//           }
+//         });
+//         return false;
+//       });
+//     });
     // !! ДАННЫЕ ИЗ МОДАЛКИ!!!!!!!!!
+    // sendDataToPhp(modalData)
+
 
     //!!! Текст сообщения об отправке данных
     const txtSuccess = 'Спасибо! Мы вам перезвоним!'
