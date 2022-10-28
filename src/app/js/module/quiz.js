@@ -71,6 +71,7 @@ export default function () {
     if(qState.curPos === 1) {
       prevBtn.classList.add('quiz-hidden')
     }
+    if(qState.dataToMail[qState.curPos-1] !== '')
     qState.curPos--;
   })
 
